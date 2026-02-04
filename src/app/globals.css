@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-display: "Poppins", system-ui, sans-serif;
+  --font-sans: "Poppins", system-ui, sans-serif;
+  --font-poppins: "Poppins", system-ui, sans-serif;
+  --color-star-pink: #ec4899;
+  --color-star-pink-hover: #f472b6;
+  --color-silver: #c4c4c4;
+  --color-silver-muted: #9ca3af;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #0a0a0a;
+  color: #fafafa;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+/* Fond scintillant style logo - effet étoiles discrètes */
+.bg-sparkle {
+  background-image: radial-gradient(1.5px 1.5px at 20px 30px, rgba(255, 255, 255, 0.15), transparent),
+    radial-gradient(1.5px 1.5px at 40px 70px, rgba(255, 255, 255, 0.1), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.12), transparent),
+    radial-gradient(1.5px 1.5px at 130px 80px, rgba(255, 255, 255, 0.1), transparent),
+    radial-gradient(1px 1px at 160px 120px, rgba(255, 255, 255, 0.08), transparent);
+  background-size: 200px 200px;
+}
+
+.text-star-pink {
+  color: var(--color-star-pink);
+}
+
+.bg-star-pink {
+  background-color: var(--color-star-pink);
+}
+
+.border-star-pink {
+  border-color: var(--color-star-pink);
+}
+
+.hover\:bg-star-pink:hover {
+  background-color: var(--color-star-pink-hover);
+}
