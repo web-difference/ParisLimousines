@@ -150,7 +150,7 @@ export default function PriceGauge() {
             <AnimatedPrice value={price} />
           </span>
           <span className="text-white/70 text-xl">€</span>
-          {persons > 1 && (
+          {persons !== null && persons > 1 && (
             <span className="text-white/50 text-sm">
               (<AnimatedPrice value={pricePerPerson} decimals={2} /> €/pers.)
             </span>
