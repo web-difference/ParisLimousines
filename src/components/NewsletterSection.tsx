@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 
 export default function NewsletterSection() {
   const [email, setEmail] = useState("");
@@ -12,7 +11,7 @@ export default function NewsletterSection() {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-[#FB25E2] font-black text-2xl md:text-3xl mb-2">
-            — 15% de réduction
+            - 10% de réduction
           </p>
           <p className="text-white font-semibold text-lg md:text-xl mb-6">
             sur votre première réservation en vous inscrivant à la newsletter
@@ -29,12 +28,14 @@ export default function NewsletterSection() {
               className="w-full sm:max-w-xs px-5 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[#FB25E2]/50 focus:border-[#FB25E2]/50"
               aria-label="Adresse email"
             />
-            <Link
-              href="/contact"
+            <a
+              href="https://wa.me/33645373229"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-3 rounded-full bg-[#FB25E2] text-white font-bold hover:bg-[#FB25E2]/90 transition-colors text-center whitespace-nowrap"
             >
-              Profiter des 15%
-            </Link>
+              Profiter des 10%
+            </a>
           </form>
         </div>
       </div>

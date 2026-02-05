@@ -27,12 +27,14 @@ export default function Home() {
               <p className="mt-3 md:mt-4 text-white/80 text-base md:text-lg font-light max-w-xl mx-auto leading-relaxed">
                 2h pendant lesquelles tout le monde vous regarde passer. Jusqu&apos;à 8 personnes pour profiter du confort, de l&apos;ambiance et du véritable champagne à Paris.
               </p>
-              <Link
-                href="/contact"
+              <a
+                href="https://wa.me/33645373229"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 mt-6 md:mt-8 border-2 border-[#FB25E2] text-[#FB25E2] font-semibold px-8 py-4 rounded-full bg-transparent hover:bg-[#FB25E2] hover:text-white transition-all duration-300 text-base md:text-lg"
               >
                 Je réserve ma place
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -146,7 +148,7 @@ export default function Home() {
             <article className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#FB25E2]/30 transition-colors">
               <div className="aspect-[4/3] relative overflow-hidden bg-black/40">
                 <Image
-                  src="/hero-limousine.png"
+                  src="/experience-paris-by-night.png"
                   alt="Paris by night en limousine"
                   fill
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
@@ -164,18 +166,20 @@ export default function Home() {
                 </p>
               </div>
             </article>
-            <article className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#FB25E2]/30 transition-colors">
-              <div className="aspect-[4/3] relative overflow-hidden bg-black/40">
-                <Image
-                  src="/hero-limousine.png"
-                  alt="Soirée étudiante le jeudi en limousine"
-                  fill
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  unoptimized
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden />
-                <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-[#FB25E2]/20 border border-[#FB25E2]/50 text-[#FB25E2] text-xs font-medium">
+            <article className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#FB25E2]/30 transition-colors relative">
+              <div className="relative">
+                <div className="aspect-[4/3] relative overflow-hidden bg-black/40">
+                  <Image
+                    src="/experience-soiree-etudiante.png"
+                    alt="Soirée étudiante le jeudi en limousine"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden />
+                </div>
+                <span className="absolute right-3 bottom-0 translate-y-1/2 px-3 py-1.5 rounded-full bg-[#FB25E2] text-white text-xs font-medium z-10">
                   Jeudi uniquement
                 </span>
               </div>
@@ -191,7 +195,7 @@ export default function Home() {
             <article className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#FB25E2]/30 transition-colors">
               <div className="aspect-[4/3] relative overflow-hidden bg-black/40">
                 <Image
-                  src="/hero-limousine.png"
+                  src="/experience-soiree-crepes.png"
                   alt="Soirée crêpes à volonté en limousine"
                   fill
                   className="object-cover object-bottom transition-transform duration-500 group-hover:scale-105"
@@ -216,6 +220,38 @@ export default function Home() {
               className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-[#FB25E2] text-[#FB25E2] font-bold text-base uppercase tracking-wider hover:bg-[#FB25E2] hover:text-white transition-all"
             >
               Toutes nos expériences →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Nos photos */}
+      <section className="py-24 md:py-28 border-t border-white/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white text-center mb-4">
+            Un petit <span className="text-[#FB25E2] font-black uppercase">sourire</span> ? 📸
+          </h2>
+          <p className="text-center text-white/60 max-w-xl mx-auto mb-12">
+            Retrouvez les meilleurs de vos souvenirs ici
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+              <div
+                key={i}
+                className="aspect-square rounded-xl bg-white/5 border border-white/10 overflow-hidden"
+              >
+                <div className="w-full h-full flex items-center justify-center text-white/30 text-sm">
+                  Photo {i}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 flex justify-center">
+            <Link
+              href="/prestations"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-[#FB25E2] text-[#FB25E2] font-bold text-base uppercase tracking-wider bg-transparent hover:bg-[#FB25E2] hover:text-white transition-all"
+            >
+              Voir toutes les photos
             </Link>
           </div>
         </div>

@@ -20,7 +20,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="relative w-full border-b border-white/10 overflow-hidden bg-[#0a0a0a]">
+    <header className="relative w-full border-b border-white/10 overflow-hidden bg-[#0a0a0a] -mt-px">
       <Starfield />
       <div className="absolute inset-0 bg-[#0a0a0a]/60 pointer-events-none" aria-hidden />
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">

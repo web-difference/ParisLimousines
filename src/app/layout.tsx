@@ -26,7 +26,7 @@ export default function RootLayout({
         />
       </head>
       <body className="flex min-h-screen flex-col antialiased bg-[#0a0a0a] text-white">
-        <div className="fixed top-0 left-0 right-0 z-50 w-full">
+        <div className="fixed top-0 left-0 right-0 z-50 w-full bg-[#0a0a0a]">
           <NewsletterBanner />
           <Header />
         </div>
