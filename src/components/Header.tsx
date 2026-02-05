@@ -3,11 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { FaCalendarAlt } from "react-icons/fa";
 import Starfield from "./Starfield";
 
 const leftNavLinks = [
   { href: "/", label: "Accueil" },
-  { href: "/prestations", label: "Expérience" },
+  { href: "/prestations", label: "Expériences" },
 ];
 
 const rightNavLinks = [
@@ -62,16 +63,16 @@ export default function Header() {
                 </Link>
               </li>
             ))}
-            <li className="relative group">
+            <li>
               <a
-                href="tel:0645373229"
-                className="text-lg md:text-xl font-black text-white hover:text-[#FB25E2] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors"
+                href="https://wa.me/33645373229"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 text-xl md:text-2xl font-black px-5 py-2.5 rounded-full bg-[#FB25E2]/30 text-white hover:bg-[#FB25E2]/50 border border-[#FB25E2]/50 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors"
               >
-                Réserver
+                <FaCalendarAlt className="w-7 h-7 shrink-0" aria-hidden />
+                RÉSERVER
               </a>
-              <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-1.5 bg-white/10 rounded text-xs font-medium text-white/90 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                06 45 37 32 29
-              </span>
             </li>
           </ul>
 
@@ -110,8 +111,15 @@ export default function Header() {
                 </li>
               ))}
               <li>
-                <a href="tel:0645373229" className="block text-lg font-black text-white hover:text-[#FB25E2] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors">
-                  Réserver — 06 45 37 32 29
+                <a
+                  href="https://wa.me/33645373229"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 text-xl font-black px-5 py-2.5 rounded-full bg-[#FB25E2]/30 text-white hover:bg-[#FB25E2]/50 border border-[#FB25E2]/50 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <FaCalendarAlt className="w-7 h-7 shrink-0" aria-hidden />
+                  RÉSERVER
                 </a>
               </li>
             </ul>

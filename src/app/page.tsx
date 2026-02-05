@@ -107,13 +107,24 @@ export default function Home() {
       </section>
 
       {/* La soirée dont on parle encore */}
-      <section className="py-24 md:py-32 border-t border-white/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 md:py-32 overflow-hidden min-h-[28rem] flex items-center">
+        <div className="absolute inset-0">
+          <Image
+            src="/section-soiree-paris.png"
+            alt=""
+            fill
+            className="object-cover object-[50%_60%]"
+            sizes="100vw"
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-black/55" aria-hidden />
+        </div>
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white leading-tight">
               La soirée dont on parle encore.
             </h2>
-            <p className="mt-8 text-xl md:text-2xl text-white/70 leading-relaxed">
+            <p className="mt-8 text-xl md:text-2xl text-white/90 leading-relaxed">
               Paris défile. Vous êtes à l&apos;intérieur. Champagne en main, votre playlist, les lumières de la ville. 
               Pas un trajet : un moment qu&apos;on n&apos;oublie pas.
             </p>
