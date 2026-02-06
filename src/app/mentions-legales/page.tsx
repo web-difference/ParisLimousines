@@ -33,28 +33,28 @@ export default function MentionsLegales() {
 
             <section>
               <h2 className="text-white font-display text-xl font-semibold mb-4">1. Éditeur du site</h2>
-              <p>Le site <strong>starparislimousine.fr</strong> est édité par :</p>
+              <p>Le site <strong>www.star-limousine-paris.com</strong> est édité par :</p>
               <p className="mt-2">
                 <strong>Star Paris Limousine</strong><br />
-                [Raison sociale et forme juridique à compléter]<br />
-                [Adresse complète à compléter]<br />
+                Entreprise Individuelle (EI)<br />
+                27 rue Baron, 75017 Paris, France<br />
                 SIRET : [À COMPLÉTER]<br />
-                RCS : [À COMPLÉTER]<br />
-                Capital social : [À COMPLÉTER]
+                N° Registre des métiers : 399 023 746 RM 75<br />
+                Code APE 3932 Z – Transport de personnes
               </p>
             </section>
 
             <section>
-              <h2 className="text-white font-display text-xl font-semibold mb-4">2. Directeur de la publication</h2>
-              <p>[Nom du responsable de la publication à compléter]</p>
+              <h2 className="text-white font-display text-xl font-semibold mb-4">2. Responsable de la publication</h2>
+              <p>Jean-Philippe BERNARD</p>
             </section>
 
             <section>
               <h2 className="text-white font-display text-xl font-semibold mb-4">3. Hébergement</h2>
               <p>
                 Ce site est hébergé par :<br />
-                [Nom de l&apos;hébergeur à compléter]<br />
-                [Adresse de l&apos;hébergeur à compléter]
+                Vercel Inc.<br />
+                340 S Lemon Ave #4133, Walnut, CA 91789, USA
               </p>
             </section>
 

@@ -20,9 +20,10 @@ export default function Footer() {
                 className="h-24 md:h-28 w-auto opacity-95"
               />
             </Link>
-            <p className="text-white/60 text-sm max-w-xs">
+            <p className="text-white/60 text-sm max-w-xs mb-2">
               Expérience prestige en longue limousine blanche de luxe à Paris. Vivez une soirée inoubliable.
             </p>
+            <p className="text-white/50 text-xs">27 rue Baron, 75017 Paris, France</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-8">
             <div>

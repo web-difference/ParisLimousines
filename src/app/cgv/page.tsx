@@ -44,7 +44,7 @@ export default function CGV() {
               <h2 className="text-white font-display text-xl font-semibold mb-4">Article 2 – Prestataire</h2>
               <p>
                 Star Paris Limousine<br />
-                [Adresse complète à compléter]<br />
+                27 rue Baron, 75017 Paris, France<br />
                 Téléphone : <a href="tel:0762830309" className="text-[#FB25E2] hover:text-[#FB25E2]/90">07 62 83 03 09</a>
               </p>
             </section>

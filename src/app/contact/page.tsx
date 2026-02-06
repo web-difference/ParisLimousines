@@ -35,8 +35,11 @@ export default function Contact() {
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-white text-center mb-2">
             Nous contacter
           </h2>
-          <p className="text-white/60 text-center mb-12 max-w-lg mx-auto">
+          <p className="text-white/60 text-center mb-6 max-w-lg mx-auto">
             Réservez votre limousine ou demandez un devis. Nous répondons rapidement.
+          </p>
+          <p className="text-white/50 text-center mb-12 text-sm">
+            27 rue Baron, 75017 Paris, France
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 max-w-2xl mx-auto">
             <a

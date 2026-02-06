@@ -37,7 +37,7 @@ export default function PolitiqueConfidentialite() {
 
             <section>
               <h2 className="text-white font-display text-xl font-semibold mb-4">1. Responsable du traitement</h2>
-              <p>Le responsable du traitement des données est : Star Paris Limousine, [adresse à compléter].</p>
+              <p>Le responsable du traitement des données est : Star Paris Limousine, 27 rue Baron, 75017 Paris, France.</p>
             </section>
 
             <section>
