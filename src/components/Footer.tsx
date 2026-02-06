@@ -21,7 +21,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-white/60 text-sm max-w-xs">
-              Expérience prestige en limousine blanche de luxe à Paris. Vivez une soirée inoubliable.
+              Expérience prestige en longue limousine blanche de luxe à Paris. Vivez une soirée inoubliable.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-8">
@@ -46,16 +46,16 @@ export default function Footer() {
             <div className="flex flex-col items-start">
               <p className="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">Réserver</p>
               <a
-                href="tel:0645373229"
+                href="tel:0762830309"
                 className="inline-flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 border border-white/10 text-[#FB25E2] font-bold text-[1.2rem] md:text-[1.3rem] hover:bg-white/10 hover:border-[#FB25E2]/30 transition-all duration-200"
               >
                 <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#FB25E2]/15 shrink-0">
                   <FaPhoneAlt className="w-5 h-5" aria-hidden />
                 </span>
-                <span className="tracking-wide">06 45 37 32 29</span>
+                <span className="tracking-wide">07 62 83 03 09</span>
               </a>
               <a
-                href="https://wa.me/33645373229"
+                href="https://wa.me/33762830309"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center gap-3 rounded-xl bg-[#FB25E2]/20 px-4 py-3 border border-[#FB25E2]/50 text-white font-black text-lg hover:bg-[#FB25E2]/40 hover:border-[#FB25E2]/70 transition-all duration-200"

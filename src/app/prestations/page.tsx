@@ -13,7 +13,7 @@ const experiences = [
   {
     id: "soiree-etudiante",
     title: "Soirée étudiante",
-    description: "Ambiance festive entre amis. Jusqu'à 8, champagne, musique. La soirée dont tout le monde parle.",
+    description: "Ambiance festive entre amis. 1h de balade uniquement. Jusqu'à 8, champagne, musique. La soirée dont tout le monde parle.",
     image: "/experience-soiree-etudiante.png",
     objectPosition: "object-center",
     tag: "Jeudi uniquement",
@@ -45,7 +45,7 @@ const experiences = [
   {
     id: "anniversaire",
     title: "Anniversaire",
-    description: "Fêtez en grand. Jusqu'à 8, champagne offert, ambiance à la carte. Une entrée qu'on n'oublie pas.",
+    description: "320 € pour 2h. Gâteau d'anniversaire offert pour 8 personnes, champagne offert, champagne sans alcool sur demande. Coca, Fanta, Champomy à volonté.",
     image: "/experience-anniversaire.png",
     objectPosition: "object-center",
     tag: null,
@@ -116,7 +116,7 @@ export default function Prestations() {
                     {exp.description}
                   </p>
                   <a
-                    href="https://wa.me/33645373229"
+                    href="https://wa.me/33762830309"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 mt-6 w-full sm:w-auto px-6 py-3 rounded-xl border-2 border-[#FB25E2] text-[#FB25E2] font-semibold text-lg bg-transparent hover:bg-[#FB25E2] hover:text-white transition-all"
@@ -132,7 +132,7 @@ export default function Prestations() {
           </div>
           <div className="mt-12 flex justify-center">
             <a
-              href="https://wa.me/33645373229"
+              href="https://wa.me/33762830309"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#FB25E2] text-white font-semibold text-lg md:text-xl hover:bg-[#FB25E2]/90 transition-all"

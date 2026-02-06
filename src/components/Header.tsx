@@ -65,7 +65,7 @@ export default function Header() {
             ))}
             <li>
               <a
-                href="https://wa.me/33645373229"
+                href="https://wa.me/33762830309"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 text-xl md:text-2xl font-black px-5 py-2.5 rounded-full bg-[#FB25E2]/30 text-white hover:bg-[#FB25E2]/50 border border-[#FB25E2]/50 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors"
@@ -112,7 +112,7 @@ export default function Header() {
               ))}
               <li>
                 <a
-                  href="https://wa.me/33645373229"
+                  href="https://wa.me/33762830309"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-xl font-black px-5 py-2.5 rounded-full bg-[#FB25E2]/30 text-white hover:bg-[#FB25E2]/50 border border-[#FB25E2]/50 transition-colors"

@@ -53,13 +53,14 @@ function AnimatedPrice({
   );
 }
 
-export default function PriceGauge() {
+export default function PriceGauge({ fixedPrice, subtitle }: { fixedPrice?: number; subtitle?: string }) {
   const [persons, setPersons] = useState<number | null>(null);
   const [hours, setHours] = useState(2);
   const [step2Visible, setStep2Visible] = useState(false);
 
-  const price = PRICES[hours];
+  const price = fixedPrice ?? PRICES[hours];
   const pricePerPerson = persons ? price / persons : 0;
+  const showHours = fixedPrice === undefined;
 
   const handleSelectPersons = (p: number) => {
     setPersons(p);
@@ -117,45 +118,52 @@ export default function PriceGauge() {
           ← {persons} {persons === 1 ? "personne" : "personnes"}
         </button>
 
-        <p className="text-white/80 text-base mb-3">Choisissez la durée</p>
-        <div className="relative mb-5">
-          <input
-            type="range"
-            min={1}
-            max={6}
-            value={hours}
-            onChange={(e) => setHours(Number(e.target.value))}
-            className="w-full h-2 rounded-full appearance-none bg-gradient-to-r from-white/10 to-white/20 cursor-pointer accent-[#FB25E2] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#FB25E2] [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white/30 [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:hover:scale-110 [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#FB25E2] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-white/30 [&::-moz-range-thumb]:cursor-pointer"
-          />
-          <div className="flex justify-between mt-3 gap-2">
-            {[1, 2, 3, 4, 5, 6].map((h) => (
-              <button
-                key={h}
-                type="button"
-                onClick={() => setHours(h)}
-                className={`flex-1 py-3 rounded-xl text-base md:text-lg font-medium transition-all duration-200 ${
-                  hours === h
-                    ? "text-white bg-[#FB25E2]/25"
-                    : "text-white/70 hover:text-white bg-white/[0.05] hover:bg-white/[0.1]"
-                }`}
-              >
-                {h}h
-              </button>
-            ))}
-          </div>
-        </div>
+        {showHours && (
+          <>
+            <p className="text-white/80 text-base mb-3">Choisissez la durée</p>
+            <div className="relative mb-5">
+              <input
+                type="range"
+                min={1}
+                max={6}
+                value={hours}
+                onChange={(e) => setHours(Number(e.target.value))}
+                className="w-full h-2 rounded-full appearance-none bg-gradient-to-r from-white/10 to-white/20 cursor-pointer accent-[#FB25E2] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#FB25E2] [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white/30 [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:hover:scale-110 [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#FB25E2] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-white/30 [&::-moz-range-thumb]:cursor-pointer"
+              />
+              <div className="flex justify-between mt-3 gap-2">
+                {[1, 2, 3, 4, 5, 6].map((h) => (
+                  <button
+                    key={h}
+                    type="button"
+                    onClick={() => setHours(h)}
+                    className={`flex-1 py-3 rounded-xl text-base md:text-lg font-medium transition-all duration-200 ${
+                      hours === h
+                        ? "text-white bg-[#FB25E2]/25"
+                        : "text-white/70 hover:text-white bg-white/[0.05] hover:bg-white/[0.1]"
+                    }`}
+                  >
+                    {h}h
+                  </button>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
 
         <div className="flex items-baseline gap-2 mt-2">
           <span className="font-display text-3xl md:text-4xl font-semibold text-white tabular-nums">
             <AnimatedPrice value={price} />
           </span>
           <span className="text-white/70 text-xl">€</span>
-          {persons !== null && persons > 1 && (
+          {persons !== null && (
             <span className="text-white/50 text-sm">
               (<AnimatedPrice value={pricePerPerson} decimals={2} /> €/pers.)
             </span>
           )}
         </div>
+        {subtitle && (
+          <p className="text-white/60 text-sm mt-3">{subtitle}</p>
+        )}
         </div>
       </div>
     </div>

@@ -31,6 +31,45 @@ export default function Tarifs() {
         </div>
       </section>
 
+      {/* Étudiants */}
+      <section className="py-20 md:py-28 border-b border-white/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="relative aspect-[4/3]">
+              <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                <Image
+                  src="/experience-soiree-etudiante.png"
+                  alt="Soirée étudiante en limousine"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
+              </div>
+              <span className="absolute top-0 -right-1 -translate-y-1/2 px-4 py-2 rounded-xl bg-[#6B217D] border border-[#FB25E2]/60 text-white text-base font-black z-10">
+                Jeudi uniquement
+              </span>
+              <div className="absolute bottom-4 left-4 right-4 z-10">
+                <Link href="/prestations#soiree-etudiante" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
+                  Voir l&apos;expérience Soirée étudiante →
+                </Link>
+              </div>
+            </div>
+            <div>
+              <h2 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
+                Forfait étudiant
+              </h2>
+              <p className="text-white/60 mb-6">Soirée festive entre amis. 1h de balade uniquement. Jusqu&apos;à 8 personnes, champagne, musique, jeux de lumière, dépôt devant la boîte de nuit de votre choix.</p>
+              <Link href="/prestations#soiree-etudiante" className="inline-block text-[#FB25E2] font-medium hover:text-[#FB25E2]/90 text-sm mb-6">
+                Découvrir l&apos;expérience →
+              </Link>
+              <PriceGauge fixedPrice={199} subtitle="pour 1h de balade avec dépôt devant la boîte de nuit de votre choix. Champagne inclus." />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Formule classique */}
       <section className="py-20 md:py-28 border-b border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,6 +101,46 @@ export default function Tarifs() {
                 Découvrir toutes les expériences →
               </Link>
               <PriceGauge />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Anniversaire */}
+      <section className="py-20 md:py-28 border-b border-white/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
+              <Image
+                src="/experience-anniversaire.png"
+                alt="Anniversaire en limousine"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
+              <div className="absolute bottom-4 left-4 right-4">
+                <Link href="/prestations#anniversaire" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
+                  Voir l&apos;expérience Forfait anniversaire →
+                </Link>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
+                Forfait anniversaire
+              </h2>
+              <p className="text-white/60 mb-4">320 € pour 2h de balade. Jusqu&apos;à 8 personnes.</p>
+              <Link href="/prestations#anniversaire" className="inline-block text-[#FB25E2] font-medium hover:text-[#FB25E2]/90 text-sm mb-4">
+                Découvrir l&apos;expérience →
+              </Link>
+              <div className="max-w-2xl space-y-2 text-white/80 text-sm mb-6">
+                <p>Gâteau d&apos;anniversaire offert pour 8 personnes</p>
+                <p>Champagne offert</p>
+                <p>Champagne sans alcool sur demande</p>
+                <p>Coca, Fanta, Champomy à volonté</p>
+              </div>
+              <PriceGauge fixedPrice={320} subtitle="pour 2h de balade" />
             </div>
           </div>
         </div>
@@ -141,8 +220,11 @@ export default function Tarifs() {
               {/* Option 1 */}
               <div className="p-6 rounded-2xl border-2 border-[#FB25E2]/30 bg-white/[0.02] hover:border-[#FB25E2]/40 transition-colors">
                 <h3 className="font-display text-lg font-semibold text-white mb-3">
-                  Crêpes au sucre - 8 crêpes par personne
+                  1h30 de balade avec arrêts photo souvenirs
                 </h3>
+                <p className="text-white/60 mb-2 text-sm">
+                  8 crêpes maison au sucre par personne
+                </p>
                 <p className="text-white/60 mb-2 text-sm">
                   Cidre breton (avec alcool ou sans alcool sur demande)
                 </p>
@@ -240,17 +322,17 @@ export default function Tarifs() {
           <p className="text-white/60 text-center mb-8">Par téléphone ou WhatsApp, à vous de choisir.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 max-w-2xl mx-auto">
             <a
-              href="tel:0645373229"
+              href="tel:0762830309"
               className="flex-1 w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-2xl border-2 border-white/20 bg-white/5 text-white font-semibold text-lg hover:border-[#FB25E2]/50 hover:bg-[#FB25E2]/10 transition-all"
             >
               <svg className="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
               </svg>
-              06 45 37 32 29
+              07 62 83 03 09
             </a>
             <span className="text-white/40 font-medium shrink-0">ou</span>
             <a
-              href="https://wa.me/33645373229"
+              href="https://wa.me/33762830309"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-[#FB25E2] text-white font-bold text-lg hover:bg-[#FB25E2]/90 transition-all"

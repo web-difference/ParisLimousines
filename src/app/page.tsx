@@ -4,14 +4,15 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      {/* Hero - Image limousine */}
-      <section className="relative w-full overflow-hidden">
+      {/* Hero - Image limousine (plein écran sous le header) */}
+      <section className="relative w-full -mt-[180px] md:-mt-[220px] overflow-hidden">
         <div className="relative w-full aspect-[21/9] overflow-hidden">
           <Image
-            src="/hero-limousine.png"
+            src="/newimage.png"
             alt="Star Paris Limousine"
-            width={1024}
-            height={682}
+            width={2560}
+            height={1090}
+            sizes="100vw"
             className="w-full h-full object-cover object-top"
             priority
             quality={100}
@@ -28,7 +29,7 @@ export default function Home() {
                 2h pendant lesquelles tout le monde vous regarde passer. Jusqu&apos;à 8 personnes pour profiter du confort, de l&apos;ambiance et du véritable champagne à Paris.
               </p>
               <a
-                href="https://wa.me/33645373229"
+                href="https://wa.me/33762830309"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 mt-6 md:mt-8 border-2 border-[#FB25E2] text-[#FB25E2] font-semibold px-8 py-4 rounded-full bg-transparent hover:bg-[#FB25E2] hover:text-white transition-all duration-300 text-base md:text-lg"
@@ -50,13 +51,18 @@ export default function Home() {
             Pour chaque moment qui compte
           </p>
           <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
-            <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#FB25E2]/30 transition-colors">
-              <p className="text-4xl md:text-5xl font-black text-[#FB25E2]">9m</p>
-              <p className="mt-2 text-white/90 font-medium">Lincoln blanche</p>
+            <div className="md:col-span-3 text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#FB25E2]/30 transition-colors">
+              <p className="text-4xl md:text-5xl font-black text-white">9 mètres de long</p>
+              <p className="mt-2 text-white/90 font-medium">Limousine Lincoln blanche</p>
               <p className="mt-1 text-white/50 text-sm">Prestige et confort</p>
             </div>
             <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#FB25E2]/30 transition-colors">
-              <p className="text-4xl md:text-5xl font-black text-[#FB25E2]">2h</p>
+              <p className="text-4xl md:text-5xl font-black text-[#FB25E2]">3</p>
+              <p className="mt-2 text-white/90 font-medium">Écrans vidéo</p>
+              <p className="mt-1 text-white/50 text-sm">À bord</p>
+            </div>
+            <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#FB25E2]/30 transition-colors">
+              <p className="text-4xl md:text-5xl font-black"><span className="text-[#FB25E2]">1h</span> <span className="text-white">/</span> <span className="text-[#FB25E2]">2h</span> <span className="text-white">/</span> <span className="text-[#FB25E2]">3h</span></p>
               <p className="mt-2 text-white/90 font-medium">De balade</p>
               <p className="mt-1 text-white/50 text-sm">Paris by night</p>
             </div>
@@ -67,7 +73,7 @@ export default function Home() {
             </div>
             <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#FB25E2]/30 transition-colors">
               <p className="text-3xl md:text-4xl font-black text-[#FB25E2]">🍾</p>
-              <p className="mt-2 text-white/90 font-medium">Champagne offert</p>
+              <p className="mt-2 text-white/90 font-medium">Véritable champagne offert</p>
               <p className="mt-1 text-white/50 text-sm">À bord</p>
             </div>
             <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#FB25E2]/30 transition-colors">
@@ -77,7 +83,7 @@ export default function Home() {
             </div>
             <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#FB25E2]/30 transition-colors">
               <p className="text-3xl md:text-4xl font-black text-[#FB25E2]">🎵</p>
-              <p className="mt-2 text-white/90 font-medium">Musique</p>
+              <p className="mt-2 text-white/90 font-medium">Musique 3000 Watt</p>
               <p className="mt-1 text-white/50 text-sm">Votre playlist à bord</p>
             </div>
           </div>
@@ -127,8 +133,8 @@ export default function Home() {
               La soirée dont on parle encore.
             </h2>
             <p className="mt-8 text-xl md:text-2xl text-white/90 leading-relaxed">
-              Paris défile. Vous êtes à l&apos;intérieur. Champagne en main, votre playlist, les lumières de la ville. 
-              Pas un trajet : un moment qu&apos;on n&apos;oublie pas.
+              Paris défile. Vous êtes à l&apos;intérieur. Coupe champagne en main, votre playlist, les lumières de la ville. 
+              Pas un trajet : un moment qu&apos;on n&apos;oublie jamais.
             </p>
             <p className="mt-8 text-[#FB25E2] font-semibold text-lg">
               Ils se souviendront de votre arrivée.
