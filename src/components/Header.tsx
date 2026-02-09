@@ -40,13 +40,13 @@ export default function Header() {
           </ul>
 
           {/* Logo - centered */}
-          <Link href="/" className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-0 md:translate-x-0 md:top-0 md:translate-y-0 flex-shrink-0 flex items-center justify-center">
+          <Link href="/" className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-0 md:translate-x-0 md:top-0 md:translate-y-0 flex-shrink-0 flex items-center justify-center w-[min(200px,55vw)] md:w-auto">
             <Image
               src="/logo2.png"
               alt="Star Limousine Paris"
               width={280}
               height={95}
-              className="h-20 w-auto md:h-28"
+              className="h-16 w-auto max-w-full object-contain object-center md:h-28"
               priority
             />
           </Link>
