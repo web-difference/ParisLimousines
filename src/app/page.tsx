@@ -83,7 +83,7 @@ export default function Home() {
             </div>
             <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#FB25E2]/30 transition-colors">
               <p className="text-3xl md:text-4xl font-black text-[#FB25E2]">🎵</p>
-              <p className="mt-2 text-white/90 font-medium">Musique 3000 Watt</p>
+              <p className="mt-2 text-white/90 font-medium">Musique 300 Watt</p>
               <p className="mt-1 text-white/50 text-sm">Votre playlist à bord</p>
             </div>
           </div>
