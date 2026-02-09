@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <>
       {/* Hero - Image limousine (plein écran sous le header) */}
-      <section className="relative w-full -mt-[180px] md:-mt-[220px] overflow-hidden">
-        <div className="relative w-full aspect-[21/9] overflow-hidden">
+      <section className="relative w-full -mt-0 md:-mt-[220px] overflow-hidden">
+        <div className="relative w-full min-h-[72vh] md:min-h-0 md:aspect-[21/9] overflow-hidden">
           <Image
             src="/newimage.png"
             alt="Star Paris Limousine"
@@ -244,17 +244,22 @@ export default function Home() {
             {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
               <div
                 key={i}
-                className="aspect-square rounded-xl bg-white/5 border border-white/10 overflow-hidden"
+                className="aspect-square rounded-xl bg-white/5 border border-white/10 overflow-hidden relative"
               >
-                <div className="w-full h-full flex items-center justify-center text-white/30 text-sm">
-                  Photo {i}
-                </div>
+                <Image
+                  src={`/n${i}.png`}
+                  alt={`Moment Star Limousine Paris ${i}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  unoptimized
+                />
               </div>
             ))}
           </div>
           <div className="mt-12 flex justify-center">
             <Link
-              href="/prestations"
+              href="/prestations#photos"
               className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-[#FB25E2] text-[#FB25E2] font-bold text-base uppercase tracking-wider bg-transparent hover:bg-[#FB25E2] hover:text-white transition-all"
             >
               Voir toutes les photos

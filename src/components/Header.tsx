@@ -42,8 +42,8 @@ export default function Header() {
           {/* Logo - centered */}
           <Link href="/" className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-0 md:translate-x-0 md:top-0 md:translate-y-0 flex-shrink-0 flex items-center justify-center">
             <Image
-              src="/logo.png"
-              alt="Star Paris Limousine"
+              src="/logo2.png"
+              alt="Star Limousine Paris"
               width={280}
               height={95}
               className="h-20 w-auto md:h-28"

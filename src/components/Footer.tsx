@@ -14,7 +14,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-4">
               <Image
                 src="/logo.png"
-                alt="Star Paris Limousine"
+                alt="Star Limousine Paris"
                 width={280}
                 height={95}
                 className="h-24 md:h-28 w-auto opacity-95"

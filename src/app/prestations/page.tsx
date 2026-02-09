@@ -56,7 +56,7 @@ export default function Prestations() {
   return (
     <>
       {/* Hero image */}
-      <section className="relative w-full -mt-[180px] md:-mt-[220px] pt-[180px] md:pt-[220px] overflow-hidden">
+      <section className="relative w-full -mt-0 md:-mt-[220px] pt-0 md:pt-[220px] overflow-hidden">
         <div className="relative w-full aspect-[21/9] min-h-[280px]">
           <Image
             src="/hero-experiences.png"
@@ -139,6 +139,49 @@ export default function Prestations() {
             >
               Réserver mon expérience
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Toutes les photos - même section que la landing, sans limite */}
+      <section id="photos" className="py-24 md:py-28 border-t border-white/5 scroll-mt-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white text-center mb-4">
+            Un petit <span className="text-[#FB25E2] font-black uppercase">sourire</span> ? 📸
+          </h2>
+          <p className="text-center text-white/60 max-w-xl mx-auto mb-12">
+            Retrouvez les meilleurs de vos souvenirs ici
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {Array.from({ length: 19 }, (_, i) => {
+              const num = i + 1;
+              if (num === 15) {
+                return (
+                  <div
+                    key={num}
+                    className="aspect-square rounded-xl bg-white/5 border border-white/10 overflow-hidden flex items-center justify-center"
+                    aria-hidden
+                  >
+                    <span className="text-white/20 text-sm">n{num}</span>
+                  </div>
+                );
+              }
+              return (
+                <div
+                  key={num}
+                  className="aspect-square rounded-xl bg-white/5 border border-white/10 overflow-hidden relative"
+                >
+                  <Image
+                    src={`/n${num}.png`}
+                    alt={`Moment Star Limousine Paris n${num}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    unoptimized
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

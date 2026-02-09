@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function MentionsLegales() {
   return (
     <>
-      <section className="relative w-full -mt-[180px] md:-mt-[220px] pt-[180px] md:pt-[220px] overflow-hidden">
+      <section className="relative w-full -mt-0 md:-mt-[220px] pt-0 md:pt-[220px] overflow-hidden">
         <div className="relative w-full aspect-[21/9] min-h-[280px]">
           <Image
             src="/hero-experiences.png"
@@ -40,6 +40,7 @@ export default function MentionsLegales() {
                 27 rue Baron, 75017 Paris, France<br />
                 SIRET : [À COMPLÉTER]<br />
                 N° Registre des métiers : 399 023 746 RM 75<br />
+                N° EVTC : 075 241 213<br />
                 Code APE 3932 Z – Transport de personnes
               </p>
             </section>

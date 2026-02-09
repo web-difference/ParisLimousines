@@ -10,9 +10,13 @@ export default function NewsletterBanner() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email.trim() || status === "loading") return;
-    setStatus("loading");
+    if (status === "loading") return;
+    if (!email.trim()) {
+      setErrorMsg("Veuillez renseigner votre email.");
+      return;
+    }
     setErrorMsg("");
+    setStatus("loading");
     try {
       const res = await fetch("/api/newsletter", {
         method: "POST",
@@ -39,39 +43,49 @@ export default function NewsletterBanner() {
       <div className="absolute inset-0 bg-black" aria-hidden />
       <div className="absolute inset-0 bg-gradient-to-r from-[#FB25E2]/25 via-[#FB25E2]/20 to-[#FB25E2]/25" aria-hidden />
       <div className="relative container mx-auto px-4 sm:px-6 py-3 pr-12 sm:pr-12 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
-        <p className="text-white font-semibold text-sm sm:text-base text-center">
-          <span className="text-[#FB25E2] font-black">- 10%</span> de réduction
-          <span className="hidden sm:inline"> sur votre première réservation</span>
-          <span className="sm:hidden"> 1ère résa</span>
-          {" "}en vous inscrivant à la newsletter
+        <p className="text-white font-semibold text-center">
+          <span className="sm:hidden block text-xs leading-tight">
+            <span className="text-[#FB25E2] font-black">-10%</span> 1ère résa
+            <br />
+            <span className="font-medium">Inscrivez-vous à la newsletter</span>
+          </span>
+          <span className="hidden sm:inline text-sm sm:text-base">
+            <span className="text-[#FB25E2] font-black">- 10%</span> de réduction sur votre première réservation en vous inscrivant à la newsletter
+          </span>
         </p>
         <form
+          noValidate
           onSubmit={handleSubmit}
-          className="flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto max-w-xs"
+          className="flex flex-col items-center gap-2 w-full sm:w-auto max-w-xs"
         >
-          <input
-            type="email"
-            placeholder="votre@email.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            disabled={status === "loading" || status === "success"}
-            className="flex-1 min-w-0 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[#FB25E2]/50 focus:border-[#FB25E2]/50 disabled:opacity-70"
-            aria-label="Adresse email"
-            required
-          />
-          {status === "success" ? (
-            <p className="text-green-400 text-sm font-medium whitespace-nowrap">Email envoyé !</p>
-          ) : (
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              className="flex-shrink-0 px-5 py-2 rounded-full bg-[#FB25E2] text-white text-sm font-bold hover:bg-[#FB25E2]/90 disabled:opacity-70 transition-colors whitespace-nowrap"
-            >
-              {status === "loading" ? "Envoi…" : "Profiter"}
-            </button>
-          )}
-          {status === "error" && (
-            <p className="text-red-400 text-xs sm:col-span-2">{errorMsg}</p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 w-full">
+            <input
+              type="email"
+              placeholder="votre@email.com"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (errorMsg) setErrorMsg("");
+              }}
+              disabled={status === "loading" || status === "success"}
+              className="flex-1 min-w-0 w-full px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[#FB25E2]/50 focus:border-[#FB25E2]/50 disabled:opacity-70"
+              aria-label="Adresse email"
+              aria-invalid={!!errorMsg}
+            />
+            {status === "success" ? (
+              <p className="text-green-400 text-sm font-medium whitespace-nowrap w-full sm:w-auto text-center">Email envoyé !</p>
+            ) : (
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="shrink-0 w-full sm:w-auto px-5 py-2 rounded-full bg-[#FB25E2] text-white text-sm font-bold hover:bg-[#FB25E2]/90 disabled:opacity-70 transition-colors whitespace-nowrap"
+              >
+                {status === "loading" ? "Envoi…" : "Profiter"}
+              </button>
+            )}
+          </div>
+          {errorMsg && (
+            <p className="text-red-300 text-xs text-center w-full" role="alert">{errorMsg}</p>
           )}
         </form>
       </div>

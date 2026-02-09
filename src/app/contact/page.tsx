@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <>
       {/* Hero */}
-      <section className="relative w-full -mt-[180px] md:-mt-[220px] pt-[180px] md:pt-[220px] overflow-hidden">
+      <section className="relative w-full -mt-0 md:-mt-[220px] pt-0 md:pt-[220px] overflow-hidden">
         <div className="relative w-full aspect-[21/9] min-h-[280px]">
           <Image
             src="/hero-experiences.png"
