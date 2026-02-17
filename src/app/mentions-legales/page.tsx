@@ -8,7 +8,7 @@ export default function MentionsLegales() {
         <div className="relative w-full aspect-[21/9] min-h-[280px]">
           <Image
             src="/hero-experiences.png"
-            alt="Mentions légales Star Paris Limousine"
+            alt="Mentions légales Star Limousine Paris"
             fill
             className="object-cover object-[50%_35%]"
             sizes="100vw"
@@ -35,7 +35,7 @@ export default function MentionsLegales() {
               <h2 className="text-white font-display text-xl font-semibold mb-4">1. Éditeur du site</h2>
               <p>Le site <strong>www.star-limousine-paris.com</strong> est édité par :</p>
               <p className="mt-2">
-                <strong>Star Paris Limousine</strong><br />
+                <strong>Star Limousine Paris</strong><br />
                 Entreprise Individuelle (EI)<br />
                 27 rue Baron, 75017 Paris, France<br />
                 SIRET : [À COMPLÉTER]<br />

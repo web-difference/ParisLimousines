@@ -8,7 +8,7 @@ export default function PolitiqueConfidentialite() {
         <div className="relative w-full aspect-[21/9] min-h-[280px]">
           <Image
             src="/hero-experiences.png"
-            alt="Politique de confidentialité Star Paris Limousine"
+            alt="Politique de confidentialité Star Limousine Paris"
             fill
             className="object-cover object-[50%_35%]"
             sizes="100vw"
@@ -32,12 +32,12 @@ export default function PolitiqueConfidentialite() {
             <p className="text-white/60 text-sm">Dernière mise à jour : {new Date().toLocaleDateString("fr-FR")}</p>
 
             <p>
-              Star Paris Limousine s&apos;engage à protéger la confidentialité des utilisateurs de son site. Cette politique précise comment nous collectons, utilisons et protégeons vos données personnelles, conformément au Règlement Général sur la Protection des Données (RGPD).
+              Star Limousine Paris s&apos;engage à protéger la confidentialité des utilisateurs de son site. Cette politique précise comment nous collectons, utilisons et protégeons vos données personnelles, conformément au Règlement Général sur la Protection des Données (RGPD).
             </p>
 
             <section>
               <h2 className="text-white font-display text-xl font-semibold mb-4">1. Responsable du traitement</h2>
-              <p>Le responsable du traitement des données est : Star Paris Limousine, 27 rue Baron, 75017 Paris, France.</p>
+              <p>Le responsable du traitement des données est : Star Limousine Paris, 27 rue Baron, 75017 Paris, France.</p>
             </section>
 
             <section>

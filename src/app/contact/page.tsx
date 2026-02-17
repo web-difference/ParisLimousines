@@ -8,7 +8,7 @@ export default function Contact() {
         <div className="relative w-full aspect-[21/9] min-h-[280px]">
           <Image
             src="/hero-experiences.png"
-            alt="Contact Star Paris Limousine"
+            alt="Contact Star Limousine Paris"
             fill
             className="object-cover object-[50%_35%]"
             sizes="100vw"

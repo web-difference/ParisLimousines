@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import Starfield from "./Starfield";
@@ -16,7 +17,13 @@ const rightNavLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+function isActive(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname.startsWith(href);
+}
+
 export default function Header() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -31,7 +38,7 @@ export default function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-lg md:text-xl font-black text-white hover:text-[#FB25E2] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors"
+                  className={`text-lg md:text-xl font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, link.href) ? "text-[#FB25E2]" : "text-white hover:text-[#FB25E2]"}`}
                 >
                   {link.label}
                 </Link>
@@ -40,13 +47,13 @@ export default function Header() {
           </ul>
 
           {/* Logo - centered */}
-          <Link href="/" className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-0 md:translate-x-0 md:top-0 md:translate-y-0 flex-shrink-0 flex items-center justify-center w-[min(200px,55vw)] md:w-auto">
+          <Link href="/" className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-0 md:translate-x-0 md:top-0 md:translate-y-0 flex-shrink-0 flex items-center justify-center w-[min(320px,72vw)] md:w-auto">
             <Image
-              src="/logo2.png"
+              src="/logo3.png"
               alt="Star Limousine Paris"
               width={280}
               height={95}
-              className="h-16 w-auto max-w-full object-contain object-center md:h-28"
+              className="h-28 w-auto max-w-full object-contain object-center md:h-40"
               priority
             />
           </Link>
@@ -57,7 +64,7 @@ export default function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-lg md:text-xl font-black text-white hover:text-[#FB25E2] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors"
+                  className={`text-lg md:text-xl font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, link.href) ? "text-[#FB25E2]" : "text-white hover:text-[#FB25E2]"}`}
                 >
                   {link.label}
                 </Link>
@@ -103,7 +110,7 @@ export default function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block text-lg font-black text-white hover:text-[#FB25E2] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors"
+                    className={`block text-lg font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, link.href) ? "text-[#FB25E2]" : "text-white hover:text-[#FB25E2]"}`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}

@@ -13,11 +13,11 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/logo2.png"
+                src="/logo3.png"
                 alt="Star Limousine Paris"
                 width={280}
                 height={95}
-                className="h-24 md:h-28 w-auto opacity-95"
+                className="h-36 md:h-40 w-auto opacity-95"
               />
             </Link>
             <p className="text-white/60 text-sm max-w-xs mb-2">
@@ -70,16 +70,16 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-4">
-          <p className="text-white/50 text-sm">© {new Date().getFullYear()} Star Paris Limousine</p>
+          <p className="text-white/50 text-sm">© {new Date().getFullYear()} Star Limousine Paris</p>
           <a
           href="https://webdifference.fr"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-[#71DDAE] text-lg hover:text-[#71DDAE]/90 transition-colors"
+          className="inline-flex items-center gap-2 text-[#FB25E2] text-lg hover:text-[#FB25E2]/90 transition-colors font-medium"
         >
-          <span className="font-normal">Site web réalisé par </span>
-          <Image src="/webdifference-icon.png" alt="" width={28} height={28} className="w-7 h-7 shrink-0 inline-block" />
-          <span className="font-bold underline"> WebDifference</span>
+          <span>Site web réalisé par </span>
+          <Image src="/webdifference-icon3.png" alt="" width={28} height={28} className="w-7 h-7 shrink-0 inline-block" />
+          <span className="font-bold">WebDifference</span>
         </a>
         </div>
       </div>

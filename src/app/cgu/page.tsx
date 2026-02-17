@@ -8,7 +8,7 @@ export default function CGU() {
         <div className="relative w-full aspect-[21/9] min-h-[280px]">
           <Image
             src="/hero-experiences.png"
-            alt="Conditions générales d'utilisation Star Paris Limousine"
+            alt="Conditions générales d'utilisation Star Limousine Paris"
             fill
             className="object-cover object-[50%_35%]"
             sizes="100vw"
@@ -37,12 +37,12 @@ export default function CGU() {
 
             <section>
               <h2 className="text-white font-display text-xl font-semibold mb-4">Article 1 – Objet</h2>
-              <p>Les CGU définissent les règles d&apos;utilisation du site internet de Star Paris Limousine. Elles s&apos;appliquent à tout visiteur, sans restriction.</p>
+              <p>Les CGU définissent les règles d&apos;utilisation du site internet de Star Limousine Paris. Elles s&apos;appliquent à tout visiteur, sans restriction.</p>
             </section>
 
             <section>
               <h2 className="text-white font-display text-xl font-semibold mb-4">Article 2 – Accès au site</h2>
-              <p>L&apos;accès au site est libre et gratuit. Star Paris Limousine s&apos;efforce d&apos;assurer la disponibilité du site 24h/24 et 7j/7, sans garantie absolue. Une interruption pour maintenance ou cas de force majeure peut survenir sans préavis.</p>
+              <p>L&apos;accès au site est libre et gratuit. Star Limousine Paris s&apos;efforce d&apos;assurer la disponibilité du site 24h/24 et 7j/7, sans garantie absolue. Une interruption pour maintenance ou cas de force majeure peut survenir sans préavis.</p>
             </section>
 
             <section>
@@ -67,7 +67,7 @@ export default function CGU() {
             <section>
               <h2 className="text-white font-display text-xl font-semibold mb-4">Article 5 – Liens hypertextes</h2>
               <p>
-                Le site peut contenir des liens vers des sites tiers. Star Paris Limousine n&apos;exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu. La création de liens vers starparislimousine.fr est soumise à autorisation préalable.
+                Le site peut contenir des liens vers des sites tiers. Star Limousine Paris n&apos;exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu. La création de liens vers starparislimousine.fr est soumise à autorisation préalable.
               </p>
             </section>
 
@@ -85,14 +85,14 @@ export default function CGU() {
             <section>
               <h2 className="text-white font-display text-xl font-semibold mb-4">Article 7 – Limitation de responsabilité</h2>
               <p>
-                Star Paris Limousine ne peut être tenue responsable des dommages directs ou indirects résultant de l&apos;utilisation du site, des erreurs ou omissions du contenu, ou de l&apos;indisponibilité du site.
+                Star Limousine Paris ne peut être tenue responsable des dommages directs ou indirects résultant de l&apos;utilisation du site, des erreurs ou omissions du contenu, ou de l&apos;indisponibilité du site.
               </p>
             </section>
 
             <section>
               <h2 className="text-white font-display text-xl font-semibold mb-4">Article 8 – Modifications</h2>
               <p>
-                Star Paris Limousine se réserve le droit de modifier ces CGU à tout moment. Les modifications prennent effet dès leur publication. La poursuite de l&apos;utilisation du site vaut acceptation des nouvelles conditions.
+                Star Limousine Paris se réserve le droit de modifier ces CGU à tout moment. Les modifications prennent effet dès leur publication. La poursuite de l&apos;utilisation du site vaut acceptation des nouvelles conditions.
               </p>
             </section>
 

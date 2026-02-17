@@ -9,7 +9,7 @@ export default function Home() {
         <div className="relative w-full min-h-[72vh] md:min-h-0 md:aspect-[21/9] overflow-hidden">
           <Image
             src="/newimage.png"
-            alt="Star Paris Limousine"
+            alt="Star Limousine Paris"
             width={2560}
             height={1090}
             sizes="100vw"
@@ -26,7 +26,7 @@ export default function Home() {
                 La <span className="text-[#FB25E2] font-black">STAR</span>, c&apos;est vous.
               </p>
               <p className="mt-3 md:mt-4 text-white/80 text-base md:text-lg font-light max-w-xl mx-auto leading-relaxed">
-                2h pendant lesquelles tout le monde vous regarde passer. Jusqu&apos;à 8 personnes pour profiter du confort, de l&apos;ambiance et du véritable champagne à Paris.
+                1 h 00 / 2 h 00 / 3 h 00 pendant lesquelles tout le monde vous regarde passer dans Paris. Jusqu&apos;à 8 passagers pour profiter entre amis du confort et de l&apos;ambiance incroyable de votre limousine. Toujours accompagné d&apos;une coupe de champagne à la main. <span className="font-semibold text-white">Un moment absolument magique.</span>
               </p>
               <a
                 href="https://wa.me/33762830309"
@@ -234,12 +234,9 @@ export default function Home() {
       {/* Nos photos */}
       <section className="py-24 md:py-28 border-t border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white text-center mb-4">
-            Un petit <span className="text-[#FB25E2] font-black uppercase">sourire</span> ? 📸
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white text-center mb-12">
+            Un pur moment de <span className="text-[#FB25E2] font-black uppercase">plaisir</span> !
           </h2>
-          <p className="text-center text-white/60 max-w-xl mx-auto mb-12">
-            Retrouvez les meilleurs de vos souvenirs ici
-          </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
               <div

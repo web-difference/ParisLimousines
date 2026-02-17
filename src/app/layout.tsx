@@ -6,7 +6,7 @@ import NewsletterBanner from "@/components/NewsletterBanner";
 import NewsletterSection from "@/components/NewsletterSection";
 
 export const metadata: Metadata = {
-  title: "Star Paris Limousine | Expérience Prestige en Limousine Blanche de Luxe",
+  title: "Star Limousine Paris | Expérience Prestige en Limousine Blanche de Luxe",
   description: "Vivez une expérience d'exception à Paris à bord d'une limousine blanche de 9 mètres. Anniversaire, EVJF, mariage — 2h de luxe pour jusqu'à 8 personnes.",
 };
 

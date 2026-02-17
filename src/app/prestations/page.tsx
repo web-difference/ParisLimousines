@@ -45,8 +45,16 @@ const experiences = [
   {
     id: "anniversaire",
     title: "Anniversaire",
-    description: "320 € pour 2h. Gâteau d'anniversaire offert pour 8 personnes, champagne offert, champagne sans alcool sur demande. Coca, Fanta, Champomy à volonté.",
+    description: "2h de balade. Gâteau d'anniversaire offert pour 8 personnes, champagne offert, champagne sans alcool sur demande. Coca, Fanta, Champomy à volonté.",
     image: "/experience-anniversaire.png",
+    objectPosition: "object-center",
+    tag: null,
+  },
+  {
+    id: "balade-deauville",
+    title: "Balade à Deauville",
+    description: "Trajets aller-retour. 6 h sur place, limousine à votre disposition. 2 bouteilles de champagne et Coca, Fanta inclus. Une escapade prestige.",
+    image: "/experience-deauville.png",
     objectPosition: "object-center",
     tag: null,
   },
@@ -146,12 +154,9 @@ export default function Prestations() {
       {/* Toutes les photos - même section que la landing, sans limite */}
       <section id="photos" className="py-24 md:py-28 border-t border-white/5 scroll-mt-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white text-center mb-4">
-            Un petit <span className="text-[#FB25E2] font-black uppercase">sourire</span> ? 📸
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white text-center mb-12">
+            Un pur moment de <span className="text-[#FB25E2] font-black uppercase">plaisir</span> !
           </h2>
-          <p className="text-center text-white/60 max-w-xl mx-auto mb-12">
-            Retrouvez les meilleurs de vos souvenirs ici
-          </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {Array.from({ length: 19 }, (_, i) => {
               const num = i + 1;

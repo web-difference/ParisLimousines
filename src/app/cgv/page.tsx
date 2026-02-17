@@ -8,7 +8,7 @@ export default function CGV() {
         <div className="relative w-full aspect-[21/9] min-h-[280px]">
           <Image
             src="/hero-experiences.png"
-            alt="Conditions générales de vente Star Paris Limousine"
+            alt="Conditions générales de vente Star Limousine Paris"
             fill
             className="object-cover object-[50%_35%]"
             sizes="100vw"
@@ -32,7 +32,7 @@ export default function CGV() {
             <p className="text-white/60 text-sm">Dernière mise à jour : {new Date().toLocaleDateString("fr-FR")}</p>
 
             <p>
-              Les présentes Conditions Générales de Vente (CGV) régissent les prestations de location de limousine proposées par Star Paris Limousine. Toute réservation implique l&apos;acceptation des présentes conditions.
+              Les présentes Conditions Générales de Vente (CGV) régissent les prestations de location de limousine proposées par Star Limousine Paris. Toute réservation implique l&apos;acceptation des présentes conditions.
             </p>
 
             <section>
@@ -43,7 +43,7 @@ export default function CGV() {
             <section>
               <h2 className="text-white font-display text-xl font-semibold mb-4">Article 2 – Prestataire</h2>
               <p>
-                Star Paris Limousine<br />
+                Star Limousine Paris<br />
                 27 rue Baron, 75017 Paris, France<br />
                 Téléphone : <a href="tel:0762830309" className="text-[#FB25E2] hover:text-[#FB25E2]/90">07 62 83 03 09</a>
               </p>
@@ -55,7 +55,7 @@ export default function CGV() {
               <ul className="list-disc pl-6 mt-2 space-y-1">
                 <li>Accord sur le devis et la date</li>
                 <li>Versement d&apos;un acompte (généralement 30 à 50 % du montant total)</li>
-                <li>Envoi d&apos;une confirmation écrite par Star Paris Limousine</li>
+                <li>Envoi d&apos;une confirmation écrite par Star Limousine Paris</li>
               </ul>
             </section>
 
@@ -75,7 +75,7 @@ export default function CGV() {
                 • Moins de 8 jours : rétention de 100 % de l&apos;acompte
               </p>
               <p className="mt-4">
-                Star Paris Limousine se réserve le droit d&apos;annuler en cas de force majeure ; dans ce cas, l&apos;acompte sera intégralement remboursé.
+                Star Limousine Paris se réserve le droit d&apos;annuler en cas de force majeure ; dans ce cas, l&apos;acompte sera intégralement remboursé.
               </p>
             </section>
 
@@ -89,7 +89,7 @@ export default function CGV() {
             <section>
               <h2 className="text-white font-display text-xl font-semibold mb-4">Article 7 – Responsabilité</h2>
               <p>
-                Le client est responsable des dommages causés à l&apos;intérieur du véhicule par lui-même ou ses invités. Star Paris Limousine décline toute responsabilité en cas de non-respect de la réglementation (alcool, nuisances sonores, etc.) par les passagers.
+                Le client est responsable des dommages causés à l&apos;intérieur du véhicule par lui-même ou ses invités. Star Limousine Paris décline toute responsabilité en cas de non-respect de la réglementation (alcool, nuisances sonores, etc.) par les passagers.
               </p>
             </section>
 

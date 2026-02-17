@@ -40,7 +40,7 @@ export async function POST(request: Request) {
 </head>
 <body style="margin:0;padding:0;font-family:Arial,sans-serif;background:#0a0a0a;color:#fff;line-height:1.6;">
   <div style="max-width:480px;margin:0 auto;padding:32px 24px;">
-    <h1 style="color:#FB25E2;font-size:24px;margin-bottom:24px;">Star Paris Limousine</h1>
+    <h1 style="color:#FB25E2;font-size:24px;margin-bottom:24px;">Star Limousine Paris</h1>
     <p style="margin-bottom:24px;color:#ccc;">Merci pour votre inscription à la newsletter !</p>
     <p style="margin-bottom:16px;color:#ccc;">Voici votre code promo <strong style="color:#fff;">-10%</strong> à indiquer lors de votre réservation :</p>
     <div style="background:#1a1a1a;border:2px solid #FB25E2;border-radius:12px;padding:16px 24px;margin:24px 0;text-align:center;">
@@ -52,16 +52,16 @@ export async function POST(request: Request) {
       <a href="tel:${PHONE}" style="display:block;padding:16px 24px;background:#fff;color:#0a0a0a;text-decoration:none;border-radius:12px;text-align:center;font-weight:bold;">📞 Appeler le 07 62 83 03 09</a>
       <a href="${WHATSAPP}" target="_blank" rel="noopener noreferrer" style="display:block;padding:16px 24px;background:#25D366;color:#fff;text-decoration:none;border-radius:12px;text-align:center;font-weight:bold;">💬 Contacter par WhatsApp</a>
     </div>
-    <p style="margin-top:32px;color:#666;font-size:12px;">Star Paris Limousine · Paris</p>
+    <p style="margin-top:32px;color:#666;font-size:12px;">Star Limousine Paris · Paris</p>
   </div>
 </body>
 </html>
 `;
 
     await transporter.sendMail({
-      from: `"Star Paris Limousine" <${user}>`,
+      from: `"Star Limousine Paris" <${user}>`,
       to: email,
-      subject: "Votre code promo -10% | Star Paris Limousine",
+      subject: "Votre code promo -10% | Star Limousine Paris",
       html,
       text: `Merci pour votre inscription ! Votre code promo -10% : ${PROMO_CODE}\nIndiquez-le lors de votre réservation.\n\nTéléphone : 07 62 83 03 09\nWhatsApp : ${WHATSAPP}`,
     });

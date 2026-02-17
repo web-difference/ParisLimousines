@@ -10,7 +10,7 @@ export default function Tarifs() {
         <div className="relative w-full aspect-[21/9] min-h-[280px]">
           <Image
             src="/hero-experiences.png"
-            alt="Tarifs Star Paris Limousine"
+            alt="Tarifs Star Limousine Paris"
             fill
             className="object-cover object-[50%_35%]"
             sizes="100vw"
@@ -31,8 +31,37 @@ export default function Tarifs() {
         </div>
       </section>
 
+      {/* Récap tarifs */}
+      <section className="py-12 md:py-16 border-b border-white/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-xl md:text-2xl font-semibold text-white text-center mb-8">
+            Récapitulatif des forfaits
+          </h2>
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+            <Link href="/tarifs#etudiants" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/90 text-sm font-medium hover:border-[#FB25E2]/40 hover:text-[#FB25E2] transition-colors">
+              Étudiant 199 €
+            </Link>
+            <Link href="/tarifs#formule-classique" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/90 text-sm font-medium hover:border-[#FB25E2]/40 hover:text-[#FB25E2] transition-colors">
+              Formule classique
+            </Link>
+            <Link href="/tarifs#anniversaire" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/90 text-sm font-medium hover:border-[#FB25E2]/40 hover:text-[#FB25E2] transition-colors">
+              Anniversaire 320 €
+            </Link>
+            <Link href="/tarifs#mariage" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/90 text-sm font-medium hover:border-[#FB25E2]/40 hover:text-[#FB25E2] transition-colors">
+              Mariage
+            </Link>
+            <Link href="/tarifs#soiree-crepes" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/90 text-sm font-medium hover:border-[#FB25E2]/40 hover:text-[#FB25E2] transition-colors">
+              Soirée crêpes 220 € / 280 €
+            </Link>
+            <Link href="/tarifs#balade-deauville" className="px-4 py-2 rounded-full bg-[#FB25E2]/15 border border-[#FB25E2]/40 text-[#FB25E2] text-sm font-bold hover:bg-[#FB25E2]/25 transition-colors">
+              Balade à Deauville 950 €
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Étudiants */}
-      <section className="py-20 md:py-28 border-b border-white/5">
+      <section id="etudiants" className="py-20 md:py-28 border-b border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative aspect-[4/3]">
@@ -71,7 +100,7 @@ export default function Tarifs() {
       </section>
 
       {/* Formule classique */}
-      <section className="py-20 md:py-28 border-b border-white/5">
+      <section id="formule-classique" className="py-20 md:py-28 border-b border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
@@ -107,7 +136,7 @@ export default function Tarifs() {
       </section>
 
       {/* Anniversaire */}
-      <section className="py-20 md:py-28 border-b border-white/5">
+      <section id="anniversaire" className="py-20 md:py-28 border-b border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
@@ -147,7 +176,7 @@ export default function Tarifs() {
       </section>
 
       {/* Forfait mariage */}
-      <section className="py-20 md:py-28 border-b border-white/5">
+      <section id="mariage" className="py-20 md:py-28 border-b border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
@@ -190,7 +219,7 @@ export default function Tarifs() {
       </section>
 
       {/* Soirée crêpes */}
-      <section className="py-20 md:py-28 border-b border-white/5">
+      <section id="soiree-crepes" className="py-20 md:py-28 border-b border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
@@ -259,6 +288,46 @@ export default function Tarifs() {
         </div>
       </section>
 
+      {/* Balade à Deauville */}
+      <section id="balade-deauville" className="py-20 md:py-28 border-b border-white/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
+              <Image
+                src="/experience-deauville.png"
+                alt="Balade à Deauville en limousine"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
+              <div className="absolute bottom-4 left-4 right-4">
+                <Link href="/prestations#balade-deauville" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
+                  Voir l&apos;expérience Balade à Deauville →
+                </Link>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
+                Balade à Deauville
+              </h2>
+              <p className="text-white/60 mb-4">Trajets aller-retour. 6 h sur place, limousine à votre disposition. 2 bouteilles de champagne et softs inclus.</p>
+              <Link href="/prestations#balade-deauville" className="inline-block text-[#FB25E2] font-medium hover:text-[#FB25E2]/90 text-sm mb-4">
+                Découvrir l&apos;expérience →
+              </Link>
+              <div className="max-w-2xl space-y-2 text-white/80 text-sm mb-6">
+                <p>Trajets aller-retour</p>
+                <p>6 h sur place, limousine à votre disposition</p>
+                <p>2 bouteilles de champagne incluses</p>
+                <p>Coca, Fanta à disposition</p>
+              </div>
+              <PriceGauge fixedPrice={950} subtitle="trajets aller-retour, 6 h sur place, 2 bouteilles de champagne et softs inclus" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Toutes nos expériences */}
       <section className="py-20 md:py-28 border-b border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -276,6 +345,7 @@ export default function Tarifs() {
               { id: "mariage", img: "/experience-mariage.png", title: "Mariage" },
               { id: "evjf-evjg", img: "/experience-evjf-evjg.png", title: "EVJF / EVJG" },
               { id: "anniversaire", img: "/experience-anniversaire.png", title: "Anniversaire" },
+              { id: "balade-deauville", img: "/experience-deauville.png", title: "Balade à Deauville" },
             ].map((exp) => (
               <Link
                 key={exp.id}
