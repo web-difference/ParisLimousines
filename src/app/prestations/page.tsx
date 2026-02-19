@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import PhotoGallery from "@/components/PhotoGallery";
 
 const experiences = [
   {
@@ -50,14 +51,6 @@ const experiences = [
     objectPosition: "object-center",
     tag: null,
   },
-  {
-    id: "balade-deauville",
-    title: "Balade à Deauville",
-    description: "Trajets aller-retour. 6 h sur place, limousine à votre disposition. 2 bouteilles de champagne et Coca, Fanta inclus. Une escapade prestige.",
-    image: "/experience-deauville.png",
-    objectPosition: "object-center",
-    tag: null,
-  },
 ];
 
 export default function Prestations() {
@@ -89,14 +82,84 @@ export default function Prestations() {
         </div>
       </section>
 
-      <section className="pt-16 md:pt-24 pb-24">
+      {/* Nos offres prestige */}
+      <section className="py-24 md:py-28 border-t border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white text-center mb-14">
+            Nos offres <span className="uppercase text-brand-gradient">prestige</span>
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-8 md:gap-10 max-w-4xl mx-auto">
+            <article className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#F34FC7]/30 transition-colors">
+              <div className="aspect-[4/3] relative overflow-hidden bg-black/40">
+                <Image
+                  src="/experience-deauville.png"
+                  alt="Balade à Deauville en limousine"
+                  fill
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden />
+              </div>
+              <div className="p-6 md:p-8">
+                <h3 className="font-display text-xl md:text-2xl font-semibold text-white">
+                  Balade à Deauville
+                </h3>
+                <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed">
+                  Journée prestige : aller-retour en limousine, 6 h sur place, champagne et boissons à bord. L&apos;évasion chic.
+                </p>
+                <Link href="/offres/deauville" className="mt-4 inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm">
+                  Découvrir l&apos;offre →
+                </Link>
+              </div>
+            </article>
+            <article className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#F34FC7]/30 transition-colors">
+              <div className="aspect-[4/3] relative overflow-hidden bg-black/40">
+                <Image
+                  src="/experience-striptease-limousine.png"
+                  alt="Soirée striptease en limousine"
+                  fill
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden />
+              </div>
+              <div className="p-6 md:p-8">
+                <h3 className="font-display text-xl md:text-2xl font-semibold text-white">
+                  Soirée striptease
+                </h3>
+                <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed">
+                  20 minutes dans la limousine avec nos stripteaseuses, show privé et confidentiel. Idéal pour vos EVJF, anniversaires ou soirées privées.
+                </p>
+                <Link href="/offres/striptease" className="mt-4 inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm">
+                  Découvrir l&apos;offre →
+                </Link>
+              </div>
+            </article>
+          </div>
+          <div className="mt-12 flex justify-center">
+            <Link
+              href="/prestations#photos"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-[#F34FC7] text-[#F34FC7] font-bold text-base uppercase tracking-wider hover:bg-brand-gradient hover:text-white hover:border-transparent transition-all"
+            >
+              Voir toutes nos offres prestige →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="experiences" className="pt-16 md:pt-24 pb-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white text-center mb-14">
+            Nos autres <span className="uppercase text-brand-gradient">expériences</span>
+          </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {experiences.map((exp) => (
               <article
                 key={exp.id}
                 id={exp.id}
-                className="group rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#FB25E2]/30 transition-colors relative"
+                className="group rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#F34FC7]/30 transition-colors relative"
               >
                 <div className="relative">
                   <div className="aspect-[4/3] relative overflow-hidden rounded-t-2xl bg-black/40">
@@ -111,7 +174,7 @@ export default function Prestations() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden />
                   </div>
                   {exp.tag && (
-                    <span className="absolute top-0 -right-1 -translate-y-1/2 px-4 py-2 rounded-xl bg-[#6B217D] border border-[#FB25E2]/60 text-white text-base font-black z-10">
+                    <span className="absolute top-0 -right-1 -translate-y-1/2 px-4 py-2 rounded-xl bg-[#D1238D] border border-[#F34FC7]/50 text-white text-base font-black z-10">
                       {exp.tag}
                     </span>
                   )}
@@ -124,10 +187,10 @@ export default function Prestations() {
                     {exp.description}
                   </p>
                   <a
-                    href="https://wa.me/33762830309"
+                    href="https://wa.me/33699717759"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 mt-6 w-full sm:w-auto px-6 py-3 rounded-xl border-2 border-[#FB25E2] text-[#FB25E2] font-semibold text-lg bg-transparent hover:bg-[#FB25E2] hover:text-white transition-all"
+                    className="inline-flex items-center justify-center gap-2 mt-6 w-full sm:w-auto px-6 py-3 rounded-xl border-2 border-[#F34FC7] text-[#F34FC7] font-semibold text-lg bg-transparent hover:bg-brand-gradient hover:text-white hover:border-transparent transition-all"
                   >
                     Réserver
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -140,10 +203,10 @@ export default function Prestations() {
           </div>
           <div className="mt-12 flex justify-center">
             <a
-              href="https://wa.me/33762830309"
+              href="https://wa.me/33699717759"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#FB25E2] text-white font-semibold text-lg md:text-xl hover:bg-[#FB25E2]/90 transition-all"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-gradient text-white font-semibold text-lg md:text-xl hover:opacity-90 transition-all"
             >
               Réserver mon expérience
             </a>
@@ -155,39 +218,11 @@ export default function Prestations() {
       <section id="photos" className="py-24 md:py-28 border-t border-white/5 scroll-mt-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white text-center mb-12">
-            Un pur moment de <span className="text-[#FB25E2] font-black uppercase">plaisir</span> !
+            Un pur moment de <span className="text-brand-gradient font-black uppercase">plaisir</span> !
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {Array.from({ length: 19 }, (_, i) => {
-              const num = i + 1;
-              if (num === 15) {
-                return (
-                  <div
-                    key={num}
-                    className="aspect-square rounded-xl bg-white/5 border border-white/10 overflow-hidden flex items-center justify-center"
-                    aria-hidden
-                  >
-                    <span className="text-white/20 text-sm">n{num}</span>
-                  </div>
-                );
-              }
-              return (
-                <div
-                  key={num}
-                  className="aspect-square rounded-xl bg-white/5 border border-white/10 overflow-hidden relative"
-                >
-                  <Image
-                    src={`/n${num}.png`}
-                    alt={`Moment Star Limousine Paris n${num}`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    unoptimized
-                  />
-                </div>
-              );
-            })}
-          </div>
+          <PhotoGallery
+            items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]}
+          />
         </div>
       </section>
     </>

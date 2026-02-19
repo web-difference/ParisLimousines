@@ -75,7 +75,7 @@ export default function CGU() {
               <h2 className="text-white font-display text-xl font-semibold mb-4">Article 6 – Données personnelles</h2>
               <p>
                 Les données personnelles collectées sur le site sont traitées conformément à notre{" "}
-                <Link href="/politique-de-confidentialite" className="text-[#FB25E2] hover:text-[#FB25E2]/90">
+                <Link href="/politique-de-confidentialite" className="text-[#F34FC7] hover:text-[#F34FC7]/90">
                   Politique de confidentialité
                 </Link>{" "}
                 et au RGPD.
@@ -105,7 +105,7 @@ export default function CGU() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">
-            <Link href="/" className="text-[#FB25E2] hover:text-[#FB25E2]/90 font-medium text-sm">
+            <Link href="/" className="text-[#F34FC7] hover:text-[#F34FC7]/90 font-medium text-sm">
               ← Retour à l&apos;accueil
             </Link>
           </div>

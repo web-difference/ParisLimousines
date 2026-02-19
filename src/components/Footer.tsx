@@ -29,39 +29,39 @@ export default function Footer() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">Navigation</p>
               <ul className="space-y-2">
-                <li><Link href="/" className="text-white/70 hover:text-[#ec4899] text-sm transition-colors">Accueil</Link></li>
-                <li><Link href="/prestations" className="text-white/70 hover:text-[#ec4899] text-sm transition-colors">Prestations</Link></li>
-                <li><Link href="/tarifs" className="text-white/70 hover:text-[#ec4899] text-sm transition-colors">Tarifs</Link></li>
-                <li><Link href="/contact" className="text-white/70 hover:text-[#ec4899] text-sm transition-colors">Contact</Link></li>
+                <li><Link href="/" className="text-white/70 hover:text-[#F34FC7] text-sm transition-colors">Accueil</Link></li>
+                <li><Link href="/prestations" className="text-white/70 hover:text-[#F34FC7] text-sm transition-colors">Prestations</Link></li>
+                <li><Link href="/tarifs" className="text-white/70 hover:text-[#F34FC7] text-sm transition-colors">Tarifs</Link></li>
+                <li><Link href="/contact" className="text-white/70 hover:text-[#F34FC7] text-sm transition-colors">Contact</Link></li>
               </ul>
             </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">Légal</p>
               <ul className="space-y-2">
-                <li><Link href="/mentions-legales" className="text-white/70 hover:text-[#FB25E2] text-sm transition-colors">Mentions légales</Link></li>
-                <li><Link href="/politique-de-confidentialite" className="text-white/70 hover:text-[#FB25E2] text-sm transition-colors">Politique de confidentialité</Link></li>
-                <li><Link href="/cgv" className="text-white/70 hover:text-[#FB25E2] text-sm transition-colors">Conditions générales de vente (CGV)</Link></li>
-                <li><Link href="/cgu" className="text-white/70 hover:text-[#FB25E2] text-sm transition-colors">Conditions générales d&apos;utilisation (CGU)</Link></li>
+                <li><Link href="/mentions-legales" className="text-white/70 hover:text-[#F34FC7] text-sm transition-colors">Mentions légales</Link></li>
+                <li><Link href="/politique-de-confidentialite" className="text-white/70 hover:text-[#F34FC7] text-sm transition-colors">Politique de confidentialité</Link></li>
+                <li><Link href="/cgv" className="text-white/70 hover:text-[#F34FC7] text-sm transition-colors">Conditions générales de vente (CGV)</Link></li>
+                <li><Link href="/cgu" className="text-white/70 hover:text-[#F34FC7] text-sm transition-colors">Conditions générales d&apos;utilisation (CGU)</Link></li>
               </ul>
             </div>
             <div className="flex flex-col items-start">
               <p className="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">Réserver</p>
               <a
-                href="tel:0762830309"
-                className="inline-flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 border border-white/10 text-[#FB25E2] font-bold text-[1.2rem] md:text-[1.3rem] hover:bg-white/10 hover:border-[#FB25E2]/30 transition-all duration-200"
+                href="tel:0699717759"
+                className="inline-flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 border border-white/10 text-[#F34FC7] font-bold text-[1.2rem] md:text-[1.3rem] hover:bg-white/10 hover:border-[#F34FC7]/30 transition-all duration-200"
               >
-                <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#FB25E2]/15 shrink-0">
+                <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#F34FC7]/15 shrink-0">
                   <FaPhoneAlt className="w-5 h-5" aria-hidden />
                 </span>
-                <span className="tracking-wide">07 62 83 03 09</span>
+                <span className="tracking-wide">06 99 71 77 59</span>
               </a>
               <a
-                href="https://wa.me/33762830309"
+                href="https://wa.me/33699717759"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-3 rounded-xl bg-[#FB25E2]/20 px-4 py-3 border border-[#FB25E2]/50 text-white font-black text-lg hover:bg-[#FB25E2]/40 hover:border-[#FB25E2]/70 transition-all duration-200"
+                className="mt-4 inline-flex items-center gap-3 rounded-xl bg-brand-gradient px-4 py-3 border border-transparent text-white font-black text-lg hover:opacity-90 transition-all duration-200"
               >
-                <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#FB25E2]/30 shrink-0">
+                <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#F34FC7]/30 shrink-0">
                   <FaCalendarAlt className="w-5 h-5" aria-hidden />
                 </span>
                 <span className="tracking-wide">RÉSERVER</span>
@@ -75,11 +75,11 @@ export default function Footer() {
           href="https://webdifference.fr"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-[#FB25E2] text-lg hover:text-[#FB25E2]/90 transition-colors font-medium"
+          className="inline-flex items-center gap-2 text-white text-lg hover:text-white/90 transition-colors font-medium"
         >
           <span>Site web réalisé par </span>
-          <Image src="/webdifference-icon3.png" alt="" width={28} height={28} className="w-7 h-7 shrink-0 inline-block" />
-          <span className="font-bold">WebDifference</span>
+          <Image src="/webdifference-icon4.png" alt="" width={28} height={28} className="w-7 h-7 shrink-0 inline-block" />
+          <span className="font-bold underline">WebDifference</span>
         </a>
         </div>
       </div>

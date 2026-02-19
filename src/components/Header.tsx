@@ -38,7 +38,7 @@ export default function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`text-lg md:text-xl font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, link.href) ? "text-[#FB25E2]" : "text-white hover:text-[#FB25E2]"}`}
+                  className={`text-lg md:text-xl font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, link.href) ? "text-brand-gradient" : "text-white hover:text-brand-gradient"}`}
                 >
                   {link.label}
                 </Link>
@@ -64,7 +64,7 @@ export default function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`text-lg md:text-xl font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, link.href) ? "text-[#FB25E2]" : "text-white hover:text-[#FB25E2]"}`}
+                  className={`text-lg md:text-xl font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, link.href) ? "text-brand-gradient" : "text-white hover:text-brand-gradient"}`}
                 >
                   {link.label}
                 </Link>
@@ -72,10 +72,10 @@ export default function Header() {
             ))}
             <li>
               <a
-                href="https://wa.me/33762830309"
+                href="https://wa.me/33699717759"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 text-xl md:text-2xl font-black px-5 py-2.5 rounded-full bg-[#FB25E2]/30 text-white hover:bg-[#FB25E2]/50 border border-[#FB25E2]/50 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors"
+                className="inline-flex items-center gap-3 text-xl md:text-2xl font-black px-5 py-2.5 rounded-full bg-brand-gradient text-white hover:opacity-90 border border-[#F34FC7]/50 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors"
               >
                 <FaCalendarAlt className="w-7 h-7 shrink-0" aria-hidden />
                 RÉSERVER
@@ -110,7 +110,7 @@ export default function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`block text-lg font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, link.href) ? "text-[#FB25E2]" : "text-white hover:text-[#FB25E2]"}`}
+                    className={`block text-lg font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, link.href) ? "text-brand-gradient" : "text-white hover:text-brand-gradient"}`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}
@@ -119,10 +119,10 @@ export default function Header() {
               ))}
               <li>
                 <a
-                  href="https://wa.me/33762830309"
+                  href="https://wa.me/33699717759"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-xl font-black px-5 py-2.5 rounded-full bg-[#FB25E2]/30 text-white hover:bg-[#FB25E2]/50 border border-[#FB25E2]/50 transition-colors"
+                  className="inline-flex items-center gap-3 text-xl font-black px-5 py-2.5 rounded-full bg-brand-gradient text-white hover:opacity-90 border border-[#F34FC7]/50 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <FaCalendarAlt className="w-7 h-7 shrink-0" aria-hidden />

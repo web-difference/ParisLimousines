@@ -75,7 +75,7 @@ export default function PriceGauge({ fixedPrice, subtitle }: { fixedPrice?: numb
   const showStep2 = persons !== null && step2Visible;
 
   return (
-    <div className="mt-8 rounded-2xl border-2 border-[#FB25E2]/30 bg-white/[0.03] overflow-hidden relative w-full max-w-md min-h-[300px]">
+    <div className="mt-8 rounded-2xl border-2 border-[#F34FC7]/30 bg-white/[0.03] overflow-hidden relative w-full max-w-md min-h-[300px]">
       {/* Étape 1 : Nombre de personnes */}
       <div
         className={`absolute inset-0 flex flex-col justify-center transition-opacity duration-500 ease-in-out ${
@@ -92,7 +92,7 @@ export default function PriceGauge({ fixedPrice, subtitle }: { fixedPrice?: numb
                 key={p}
                 type="button"
                 onClick={() => handleSelectPersons(p)}
-                className="w-full aspect-[2/1] min-h-12 rounded-xl text-lg font-medium transition-all duration-200 text-white/90 hover:text-white hover:bg-[#FB25E2]/20 bg-white/[0.06] hover:scale-[1.02]"
+                className="w-full aspect-[2/1] min-h-12 rounded-xl text-lg font-medium transition-all duration-200 text-white/90 hover:text-white hover:bg-[#F34FC7]/20 bg-white/[0.06] hover:scale-[1.02]"
               >
                 {p}
               </button>
@@ -113,7 +113,7 @@ export default function PriceGauge({ fixedPrice, subtitle }: { fixedPrice?: numb
         <button
           type="button"
           onClick={handleBack}
-          className="text-white/40 hover:text-[#FB25E2] text-sm mb-6 transition-colors inline-flex items-center gap-1 w-fit"
+          className="text-white/40 hover:text-[#F34FC7] text-sm mb-6 transition-colors inline-flex items-center gap-1 w-fit"
         >
           ← {persons} {persons === 1 ? "personne" : "personnes"}
         </button>
@@ -128,7 +128,7 @@ export default function PriceGauge({ fixedPrice, subtitle }: { fixedPrice?: numb
                 max={6}
                 value={hours}
                 onChange={(e) => setHours(Number(e.target.value))}
-                className="w-full h-2 rounded-full appearance-none bg-gradient-to-r from-white/10 to-white/20 cursor-pointer accent-[#FB25E2] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#FB25E2] [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white/30 [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:hover:scale-110 [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#FB25E2] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-white/30 [&::-moz-range-thumb]:cursor-pointer"
+                className="w-full h-2 rounded-full appearance-none bg-gradient-to-r from-white/10 to-white/20 cursor-pointer accent-[#F34FC7] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#F34FC7] [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white/30 [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:hover:scale-110 [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#F34FC7] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-white/30 [&::-moz-range-thumb]:cursor-pointer"
               />
               <div className="flex justify-between mt-3 gap-2">
                 {[1, 2, 3, 4, 5, 6].map((h) => (
@@ -138,7 +138,7 @@ export default function PriceGauge({ fixedPrice, subtitle }: { fixedPrice?: numb
                     onClick={() => setHours(h)}
                     className={`flex-1 py-3 rounded-xl text-base md:text-lg font-medium transition-all duration-200 ${
                       hours === h
-                        ? "text-white bg-[#FB25E2]/25"
+                        ? "text-white bg-[#F34FC7]/25"
                         : "text-white/70 hover:text-white bg-white/[0.05] hover:bg-white/[0.1]"
                     }`}
                   >
@@ -164,6 +164,17 @@ export default function PriceGauge({ fixedPrice, subtitle }: { fixedPrice?: numb
         {subtitle && (
           <p className="text-white/60 text-sm mt-3">{subtitle}</p>
         )}
+        <a
+          href="https://wa.me/33699717759"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-brand-gradient text-white font-bold text-base hover:opacity-90 transition-all"
+        >
+          Réserver
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
         </div>
       </div>
     </div>

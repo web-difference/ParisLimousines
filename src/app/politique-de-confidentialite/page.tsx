@@ -83,9 +83,9 @@ export default function PolitiqueConfidentialite() {
               </ul>
               <p className="mt-4">
                 Pour exercer ces droits, contactez-nous au{" "}
-                <a href="tel:0762830309" className="text-[#FB25E2] hover:text-[#FB25E2]/90">07 62 83 03 09</a>
+                <a href="tel:0699717759" className="text-[#F34FC7] hover:text-[#F34FC7]/90">06 99 71 77 59</a>
                 {" "}ou par{" "}
-                <a href="https://wa.me/33762830309" target="_blank" rel="noopener noreferrer" className="text-[#FB25E2] hover:text-[#FB25E2]/90">WhatsApp</a>.
+                <a href="https://wa.me/33699717759" target="_blank" rel="noopener noreferrer" className="text-[#F34FC7] hover:text-[#F34FC7]/90">WhatsApp</a>.
                 Vous pouvez également introduire une réclamation auprès de la CNIL.
               </p>
             </section>
@@ -105,7 +105,7 @@ export default function PolitiqueConfidentialite() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">
-            <Link href="/" className="text-[#FB25E2] hover:text-[#FB25E2]/90 font-medium text-sm">
+            <Link href="/" className="text-[#F34FC7] hover:text-[#F34FC7]/90 font-medium text-sm">
               ← Retour à l&apos;accueil
             </Link>
           </div>

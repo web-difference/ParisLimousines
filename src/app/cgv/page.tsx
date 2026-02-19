@@ -45,7 +45,7 @@ export default function CGV() {
               <p>
                 Star Limousine Paris<br />
                 27 rue Baron, 75017 Paris, France<br />
-                Téléphone : <a href="tel:0762830309" className="text-[#FB25E2] hover:text-[#FB25E2]/90">07 62 83 03 09</a>
+                Téléphone : <a href="tel:0699717759" className="text-[#F34FC7] hover:text-[#F34FC7]/90">06 99 71 77 59</a>
               </p>
             </section>
 
@@ -102,7 +102,7 @@ export default function CGV() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">
-            <Link href="/" className="text-[#FB25E2] hover:text-[#FB25E2]/90 font-medium text-sm">
+            <Link href="/" className="text-[#F34FC7] hover:text-[#F34FC7]/90 font-medium text-sm">
               ← Retour à l&apos;accueil
             </Link>
           </div>

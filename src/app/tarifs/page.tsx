@@ -31,37 +31,100 @@ export default function Tarifs() {
         </div>
       </section>
 
-      {/* Récap tarifs */}
-      <section className="py-12 md:py-16 border-b border-white/5">
+      {/* Offres prestige : Deauville + Striptease */}
+      <section id="balade-deauville" className="py-20 md:py-28 border-b border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-xl md:text-2xl font-semibold text-white text-center mb-8">
-            Récapitulatif des forfaits
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white text-left mb-14">
+            Nos offres <span className="uppercase text-brand-gradient">prestige</span>
           </h2>
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-            <Link href="/tarifs#etudiants" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/90 text-sm font-medium hover:border-[#FB25E2]/40 hover:text-[#FB25E2] transition-colors">
-              Étudiant 199 €
-            </Link>
-            <Link href="/tarifs#formule-classique" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/90 text-sm font-medium hover:border-[#FB25E2]/40 hover:text-[#FB25E2] transition-colors">
-              Formule classique
-            </Link>
-            <Link href="/tarifs#anniversaire" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/90 text-sm font-medium hover:border-[#FB25E2]/40 hover:text-[#FB25E2] transition-colors">
-              Anniversaire 320 €
-            </Link>
-            <Link href="/tarifs#mariage" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/90 text-sm font-medium hover:border-[#FB25E2]/40 hover:text-[#FB25E2] transition-colors">
-              Mariage
-            </Link>
-            <Link href="/tarifs#soiree-crepes" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/90 text-sm font-medium hover:border-[#FB25E2]/40 hover:text-[#FB25E2] transition-colors">
-              Soirée crêpes 220 € / 280 €
-            </Link>
-            <Link href="/tarifs#balade-deauville" className="px-4 py-2 rounded-full bg-[#FB25E2]/15 border border-[#FB25E2]/40 text-[#FB25E2] text-sm font-bold hover:bg-[#FB25E2]/25 transition-colors">
-              Balade à Deauville 950 €
-            </Link>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
+              <Image
+                src="/experience-deauville.png"
+                alt="Balade à Deauville en limousine"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
+              <div className="absolute bottom-4 left-4 right-4">
+                <Link href="/offres/deauville" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
+                  Voir l&apos;offre Balade à Deauville →
+                </Link>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <h3 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
+                Balade à Deauville
+              </h3>
+              <p className="text-white/60 mb-4">Trajets aller-retour. 6 h sur place, limousine à votre disposition. 2 bouteilles de champagne et softs inclus.</p>
+              <Link href="/offres/deauville" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm mb-4">
+                Découvrir l&apos;offre →
+              </Link>
+              <div className="max-w-2xl space-y-2 text-white/80 text-sm mb-6">
+                <p>Trajets aller-retour</p>
+                <p>6 h sur place, limousine à votre disposition</p>
+                <p>2 bouteilles de champagne incluses</p>
+                <p>Coca, Fanta à disposition</p>
+              </div>
+              <PriceGauge fixedPrice={950} subtitle="trajets aller-retour, 6 h sur place, 2 bouteilles de champagne et softs inclus" />
+            </div>
+          </div>
+
+          {/* Soirée striptease */}
+          <div id="striptease" className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
+              <Image
+                src="/experience-striptease-limousine.png"
+                alt="Soirée striptease en limousine"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
+              <div className="absolute bottom-4 left-4 right-4">
+                <Link href="/offres/striptease" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
+                  Voir l&apos;offre Soirée striptease →
+                </Link>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <h3 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
+                Soirée striptease
+              </h3>
+              <p className="text-white/60 mb-4">20 minutes dans la limousine avec nos stripteaseuses, show privé et confidentiel. Idéal pour vos EVJF, anniversaires ou soirées privées.</p>
+              <Link href="/offres/striptease" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm mb-3">
+                Découvrir l&apos;offre →
+              </Link>
+              <div className="mt-1">
+                <a
+                  href="https://wa.me/33699717759"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-brand-gradient text-white font-bold text-base hover:opacity-90 transition-opacity"
+                >
+                  Nous contacter pour un devis
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Bandeau rose + Nos autres offres */}
+      <div className="w-full py-6 md:py-8 bg-brand-gradient" aria-hidden />
+      <section className="pt-16 md:pt-20 pb-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white text-left mb-14">
+            Nos autres <span className="uppercase text-brand-gradient">offres</span>
+          </h2>
+        </div>
+      </section>
+
       {/* Étudiants */}
-      <section id="etudiants" className="py-20 md:py-28 border-b border-white/5">
+      <section id="etudiants" className="pt-8 md:pt-12 pb-20 md:pb-28 border-b border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative aspect-[4/3]">
@@ -76,7 +139,7 @@ export default function Tarifs() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
               </div>
-              <span className="absolute top-0 -right-1 -translate-y-1/2 px-4 py-2 rounded-xl bg-[#6B217D] border border-[#FB25E2]/60 text-white text-base font-black z-10">
+              <span className="absolute top-0 -right-1 -translate-y-1/2 px-4 py-2 rounded-xl bg-[#D1238D] border border-[#F34FC7]/50 text-white text-base font-black z-10">
                 Jeudi uniquement
               </span>
               <div className="absolute bottom-4 left-4 right-4 z-10">
@@ -90,7 +153,7 @@ export default function Tarifs() {
                 Forfait étudiant
               </h2>
               <p className="text-white/60 mb-6">Soirée festive entre amis. 1h de balade uniquement. Jusqu&apos;à 8 personnes, champagne, musique, jeux de lumière, dépôt devant la boîte de nuit de votre choix.</p>
-              <Link href="/prestations#soiree-etudiante" className="inline-block text-[#FB25E2] font-medium hover:text-[#FB25E2]/90 text-sm mb-6">
+              <Link href="/prestations#soiree-etudiante" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm mb-6">
                 Découvrir l&apos;expérience →
               </Link>
               <PriceGauge fixedPrice={199} subtitle="pour 1h de balade avec dépôt devant la boîte de nuit de votre choix. Champagne inclus." />
@@ -126,7 +189,7 @@ export default function Tarifs() {
               <p className="text-white/60 mb-2 max-w-xl">
                 Paris by night, soirée étudiante, anniversaire, EVJF/EVJG — Prix forfaitaire de 1 à 8 personnes.
               </p>
-              <Link href="/prestations" className="inline-block text-[#FB25E2] font-medium hover:text-[#FB25E2]/90 text-sm mt-2">
+              <Link href="/prestations" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm mt-2">
                 Découvrir toutes les expériences →
               </Link>
               <PriceGauge />
@@ -160,7 +223,7 @@ export default function Tarifs() {
                 Forfait anniversaire
               </h2>
               <p className="text-white/60 mb-4">320 € pour 2h de balade. Jusqu&apos;à 8 personnes.</p>
-              <Link href="/prestations#anniversaire" className="inline-block text-[#FB25E2] font-medium hover:text-[#FB25E2]/90 text-sm mb-4">
+              <Link href="/prestations#anniversaire" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm mb-4">
                 Découvrir l&apos;expérience →
               </Link>
               <div className="max-w-2xl space-y-2 text-white/80 text-sm mb-6">
@@ -200,7 +263,7 @@ export default function Tarifs() {
                 Forfait mariage
               </h2>
               <p className="text-white/60 mb-2">7 jours sur 7 · Paris et Banlieue</p>
-              <Link href="/prestations#mariage" className="inline-block text-[#FB25E2] font-medium hover:text-[#FB25E2]/90 text-sm mb-4">
+              <Link href="/prestations#mariage" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm mb-4">
                 Découvrir l&apos;expérience Mariage →
               </Link>
               <div className="max-w-2xl space-y-2 text-white/80 text-sm mb-6">
@@ -209,7 +272,7 @@ export default function Tarifs() {
                 <p>Boissons softs (Coca, Fanta) incluses</p>
                 <p>
                   Option bouquet de fleurs aux couleurs de votre choix :{" "}
-                  <span className="text-[#FB25E2] font-semibold">+ 90 €</span>
+                  <span className="text-[#F34FC7] font-semibold">+ 90 €</span>
                 </p>
               </div>
               <PriceGauge />
@@ -241,13 +304,13 @@ export default function Tarifs() {
                 <p className="text-white/60 mb-2">
                   Balade gourmande dans Paris avec crêpes à bord. Une formule unique et conviviale.
                 </p>
-                <Link href="/prestations#soiree-crepes" className="inline-block text-[#FB25E2] font-medium hover:text-[#FB25E2]/90 text-sm">
+                <Link href="/prestations#soiree-crepes" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm">
                   Découvrir l&apos;expérience →
                 </Link>
               </div>
 
               {/* Option 1 */}
-              <div className="p-6 rounded-2xl border-2 border-[#FB25E2]/30 bg-white/[0.02] hover:border-[#FB25E2]/40 transition-colors">
+              <div className="p-6 rounded-2xl border-2 border-[#F34FC7]/30 bg-white/[0.02] hover:border-[#F34FC7]/40 transition-colors">
                 <h3 className="font-display text-lg font-semibold text-white mb-3">
                   1h30 de balade avec arrêts photo souvenirs
                 </h3>
@@ -260,14 +323,14 @@ export default function Tarifs() {
                 <p className="text-white/50 text-xs mb-4">Lundi, mardi, mercredi uniquement</p>
                 <div className="flex flex-wrap items-baseline gap-3">
                   <span className="font-display text-2xl font-semibold text-white">220 €</span>
-                  <span className="text-[#FB25E2]/80 text-sm font-semibold">
+                  <span className="text-[#F34FC7]/80 text-sm font-semibold">
                     27,50 € par personne
                   </span>
                 </div>
               </div>
 
               {/* Option 2 */}
-              <div className="p-6 rounded-2xl border-2 border-[#FB25E2]/30 bg-white/[0.02] hover:border-[#FB25E2]/40 transition-colors">
+              <div className="p-6 rounded-2xl border-2 border-[#F34FC7]/30 bg-white/[0.02] hover:border-[#F34FC7]/40 transition-colors">
                 <h3 className="font-display text-lg font-semibold text-white mb-3">
                   1h30 de balade avec arrêts photos souvenirs
                 </h3>
@@ -278,51 +341,11 @@ export default function Tarifs() {
                 </ul>
                 <div className="flex flex-wrap items-baseline gap-3">
                   <span className="font-display text-2xl font-semibold text-white">280 €</span>
-                  <span className="text-[#FB25E2]/80 text-sm font-semibold">
+                  <span className="text-[#F34FC7]/80 text-sm font-semibold">
                     35 € par personne
                   </span>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Balade à Deauville */}
-      <section id="balade-deauville" className="py-20 md:py-28 border-b border-white/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
-              <Image
-                src="/experience-deauville.png"
-                alt="Balade à Deauville en limousine"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                unoptimized
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
-              <div className="absolute bottom-4 left-4 right-4">
-                <Link href="/prestations#balade-deauville" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
-                  Voir l&apos;expérience Balade à Deauville →
-                </Link>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2">
-              <h2 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
-                Balade à Deauville
-              </h2>
-              <p className="text-white/60 mb-4">Trajets aller-retour. 6 h sur place, limousine à votre disposition. 2 bouteilles de champagne et softs inclus.</p>
-              <Link href="/prestations#balade-deauville" className="inline-block text-[#FB25E2] font-medium hover:text-[#FB25E2]/90 text-sm mb-4">
-                Découvrir l&apos;expérience →
-              </Link>
-              <div className="max-w-2xl space-y-2 text-white/80 text-sm mb-6">
-                <p>Trajets aller-retour</p>
-                <p>6 h sur place, limousine à votre disposition</p>
-                <p>2 bouteilles de champagne incluses</p>
-                <p>Coca, Fanta à disposition</p>
-              </div>
-              <PriceGauge fixedPrice={950} subtitle="trajets aller-retour, 6 h sur place, 2 bouteilles de champagne et softs inclus" />
             </div>
           </div>
         </div>
@@ -346,11 +369,12 @@ export default function Tarifs() {
               { id: "evjf-evjg", img: "/experience-evjf-evjg.png", title: "EVJF / EVJG" },
               { id: "anniversaire", img: "/experience-anniversaire.png", title: "Anniversaire" },
               { id: "balade-deauville", img: "/experience-deauville.png", title: "Balade à Deauville" },
+              { id: "striptease", img: "/experience-striptease-limousine.png", title: "Soirée striptease" },
             ].map((exp) => (
               <Link
                 key={exp.id}
-                href={`/prestations#${exp.id}`}
-                className="group block rounded-xl overflow-hidden border border-white/10 hover:border-[#FB25E2]/40 transition-colors"
+                href={exp.id === "balade-deauville" ? "/offres/deauville" : exp.id === "striptease" ? "/offres/striptease" : `/prestations#${exp.id}`}
+                className="group block rounded-xl overflow-hidden border border-white/10 hover:border-[#F34FC7]/40 transition-colors"
               >
                 <div className="aspect-square relative">
                   <Image
@@ -363,7 +387,7 @@ export default function Tarifs() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden />
                 </div>
-                <p className="p-3 text-center text-white/90 text-sm font-medium group-hover:text-[#FB25E2] transition-colors">
+                <p className="p-3 text-center text-white/90 text-sm font-medium group-hover:text-[#F34FC7] transition-colors">
                   {exp.title}
                 </p>
               </Link>
@@ -372,7 +396,7 @@ export default function Tarifs() {
           <div className="mt-8 text-center">
             <Link
               href="/prestations"
-              className="inline-flex items-center gap-2 text-[#FB25E2] font-semibold hover:text-[#FB25E2]/90 transition-colors"
+              className="inline-flex items-center gap-2 text-[#F34FC7] font-semibold hover:text-[#F34FC7]/90 transition-colors"
             >
               Voir toutes nos expériences
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -392,20 +416,20 @@ export default function Tarifs() {
           <p className="text-white/60 text-center mb-8">Par téléphone ou WhatsApp, à vous de choisir.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 max-w-2xl mx-auto">
             <a
-              href="tel:0762830309"
-              className="flex-1 w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-2xl border-2 border-white/20 bg-white/5 text-white font-semibold text-lg hover:border-[#FB25E2]/50 hover:bg-[#FB25E2]/10 transition-all"
+              href="tel:0699717759"
+              className="flex-1 w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-2xl border-2 border-white/20 bg-white/5 text-white font-semibold text-lg hover:border-[#F34FC7]/50 hover:bg-[#F34FC7]/10 transition-all"
             >
               <svg className="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
               </svg>
-              07 62 83 03 09
+              06 99 71 77 59
             </a>
             <span className="text-white/40 font-medium shrink-0">ou</span>
             <a
-              href="https://wa.me/33762830309"
+              href="https://wa.me/33699717759"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-[#FB25E2] text-white font-bold text-lg hover:bg-[#FB25E2]/90 transition-all"
+              className="flex-1 w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-brand-gradient text-white font-bold text-lg hover:opacity-90 transition-all"
             >
               <svg className="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />

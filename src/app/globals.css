@@ -4,8 +4,11 @@
   --font-display: "Poppins", system-ui, sans-serif;
   --font-sans: "Poppins", system-ui, sans-serif;
   --font-poppins: "Poppins", system-ui, sans-serif;
-  --color-star-pink: #ec4899;
-  --color-star-pink-hover: #f472b6;
+  /* Gradient principal = F34FC7 → D1238D */
+  --color-brand-from: #F34FC7;
+  --color-brand-to: #D1238D;
+  --color-star-pink: #F34FC7;
+  --color-star-pink-hover: #D1238D;
   --color-silver: #c4c4c4;
   --color-silver-muted: #9ca3af;
 }
@@ -48,4 +51,23 @@ body {
 
 .hover\:bg-star-pink:hover {
   background-color: var(--color-star-pink-hover);
+}
+
+/* Gradient marque (F34FC7 → D1238D) */
+.bg-brand-gradient {
+  background: linear-gradient(135deg, var(--color-brand-from) 0%, var(--color-brand-to) 100%);
+}
+
+.text-brand-gradient {
+  background: linear-gradient(135deg, var(--color-brand-from) 0%, var(--color-brand-to) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hover\:text-brand-gradient:hover {
+  background: linear-gradient(135deg, var(--color-brand-from) 0%, var(--color-brand-to) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

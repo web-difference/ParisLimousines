@@ -62,8 +62,8 @@ export default function MentionsLegales() {
             <section>
               <h2 className="text-white font-display text-xl font-semibold mb-4">4. Contact</h2>
               <p>
-                Téléphone : <a href="tel:0762830309" className="text-[#FB25E2] hover:text-[#FB25E2]/90">07 62 83 03 09</a><br />
-                WhatsApp : <a href="https://wa.me/33762830309" target="_blank" rel="noopener noreferrer" className="text-[#FB25E2] hover:text-[#FB25E2]/90">07 62 83 03 09</a>
+                Téléphone : <a href="tel:0699717759" className="text-[#F34FC7] hover:text-[#F34FC7]/90">06 99 71 77 59</a><br />
+                WhatsApp : <a href="https://wa.me/33699717759" target="_blank" rel="noopener noreferrer" className="text-[#F34FC7] hover:text-[#F34FC7]/90">06 99 71 77 59</a>
               </p>
             </section>
 
@@ -79,7 +79,7 @@ export default function MentionsLegales() {
               <h2 className="text-white font-display text-xl font-semibold mb-4">6. Conception du site</h2>
               <p>
                 Site web réalisé par{" "}
-                <a href="https://webdifference.fr" target="_blank" rel="noopener noreferrer" className="text-[#FB25E2] hover:text-[#FB25E2]/90 font-medium">
+                <a href="https://webdifference.fr" target="_blank" rel="noopener noreferrer" className="text-[#F34FC7] hover:text-[#F34FC7]/90 font-medium">
                   WebDifference
                 </a>
                 .
@@ -88,7 +88,7 @@ export default function MentionsLegales() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">
-            <Link href="/" className="text-[#FB25E2] hover:text-[#FB25E2]/90 font-medium text-sm">
+            <Link href="/" className="text-[#F34FC7] hover:text-[#F34FC7]/90 font-medium text-sm">
               ← Retour à l&apos;accueil
             </Link>
           </div>

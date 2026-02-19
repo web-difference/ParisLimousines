@@ -41,16 +41,16 @@ export default function NewsletterBanner() {
   return (
     <div className="relative overflow-hidden">
       <div className="absolute inset-0 bg-black" aria-hidden />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#FB25E2]/25 via-[#FB25E2]/20 to-[#FB25E2]/25" aria-hidden />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/[0.03] via-transparent to-white/[0.03]" aria-hidden />
       <div className="relative container mx-auto px-4 sm:px-6 py-3 pr-12 sm:pr-12 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
         <p className="text-white font-semibold text-center">
           <span className="sm:hidden block text-xs leading-tight">
-            <span className="text-[#FB25E2] font-black">-10%</span> 1ère résa
+            <span className="text-[#F34FC7] font-black">-10%</span> 1ère résa
             <br />
             <span className="font-medium">Inscrivez-vous à la newsletter</span>
           </span>
           <span className="hidden sm:inline text-sm sm:text-base">
-            <span className="text-[#FB25E2] font-black">- 10%</span> de réduction sur votre première réservation en vous inscrivant à la newsletter
+            <span className="text-[#F34FC7] font-black">- 10%</span> de réduction sur votre première réservation en vous inscrivant à la newsletter
           </span>
         </p>
         <form
@@ -68,7 +68,7 @@ export default function NewsletterBanner() {
                 if (errorMsg) setErrorMsg("");
               }}
               disabled={status === "loading" || status === "success"}
-              className="flex-1 min-w-0 w-full px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[#FB25E2]/50 focus:border-[#FB25E2]/50 disabled:opacity-70"
+              className="flex-1 min-w-0 w-full px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/50 focus:border-[#F34FC7]/50 disabled:opacity-70"
               aria-label="Adresse email"
               aria-invalid={!!errorMsg}
             />
@@ -78,7 +78,7 @@ export default function NewsletterBanner() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="shrink-0 w-full sm:w-auto px-5 py-2 rounded-full bg-[#FB25E2] text-white text-sm font-bold hover:bg-[#FB25E2]/90 disabled:opacity-70 transition-colors whitespace-nowrap"
+                className="shrink-0 w-full sm:w-auto px-5 py-2 rounded-full bg-brand-gradient text-white text-sm font-bold hover:opacity-90 disabled:opacity-70 transition-colors whitespace-nowrap"
               >
                 {status === "loading" ? "Envoi…" : "Profiter"}
               </button>
