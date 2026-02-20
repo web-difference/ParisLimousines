@@ -31,94 +31,11 @@ export default function Tarifs() {
         </div>
       </section>
 
-      {/* Offres prestige : Deauville + Striptease */}
-      <section id="balade-deauville" className="py-20 md:py-28 border-b border-white/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white text-left mb-14">
-            Nos offres <span className="uppercase text-brand-gradient">prestige</span>
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
-              <Image
-                src="/experience-deauville.png"
-                alt="Balade à Deauville en limousine"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                unoptimized
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
-              <div className="absolute bottom-4 left-4 right-4">
-                <Link href="/offres/deauville" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
-                  Voir l&apos;offre Balade à Deauville →
-                </Link>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2">
-              <h3 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
-                Balade à Deauville
-              </h3>
-              <p className="text-white/60 mb-4">Trajets aller-retour. 6 h sur place, limousine à votre disposition. 2 bouteilles de champagne et softs inclus.</p>
-              <Link href="/offres/deauville" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm mb-4">
-                Découvrir l&apos;offre →
-              </Link>
-              <div className="max-w-2xl space-y-2 text-white/80 text-sm mb-6">
-                <p>Trajets aller-retour</p>
-                <p>6 h sur place, limousine à votre disposition</p>
-                <p>2 bouteilles de champagne incluses</p>
-                <p>Coca, Fanta à disposition</p>
-              </div>
-              <PriceGauge fixedPrice={950} subtitle="trajets aller-retour, 6 h sur place, 2 bouteilles de champagne et softs inclus" />
-            </div>
-          </div>
-
-          {/* Soirée striptease */}
-          <div id="striptease" className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
-              <Image
-                src="/experience-striptease-limousine.png"
-                alt="Soirée striptease en limousine"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                unoptimized
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
-              <div className="absolute bottom-4 left-4 right-4">
-                <Link href="/offres/striptease" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
-                  Voir l&apos;offre Soirée striptease →
-                </Link>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2">
-              <h3 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
-                Soirée striptease
-              </h3>
-              <p className="text-white/60 mb-4">20 minutes dans la limousine avec nos stripteaseuses, show privé et confidentiel. Idéal pour vos EVJF, anniversaires ou soirées privées.</p>
-              <Link href="/offres/striptease" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm mb-3">
-                Découvrir l&apos;offre →
-              </Link>
-              <div className="mt-1">
-                <a
-                  href="https://wa.me/33699717759"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-brand-gradient text-white font-bold text-base hover:opacity-90 transition-opacity"
-                >
-                  Nous contacter pour un devis
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Bandeau rose + Nos autres offres */}
-      <div className="w-full py-6 md:py-8 bg-brand-gradient" aria-hidden />
+      {/* Bandeau rose + Nos offres (en premier) */}
       <section className="pt-16 md:pt-20 pb-4">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white text-left mb-14">
-            Nos autres <span className="uppercase text-brand-gradient">offres</span>
+            Nos <span className="uppercase text-brand-gradient">offres</span>
           </h2>
         </div>
       </section>
@@ -222,7 +139,7 @@ export default function Tarifs() {
               <h2 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
                 Forfait anniversaire
               </h2>
-              <p className="text-white/60 mb-4">320 € pour 2h de balade. Jusqu&apos;à 8 personnes.</p>
+              <p className="text-white/60 mb-4">2h de balade. Jusqu&apos;à 8 personnes.</p>
               <Link href="/prestations#anniversaire" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm mb-4">
                 Découvrir l&apos;expérience →
               </Link>
@@ -345,6 +262,89 @@ export default function Tarifs() {
                     35 € par personne
                   </span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bandeau rose + Nos offres prestige */}
+      <div className="w-full py-6 md:py-8 bg-brand-gradient" aria-hidden />
+      <section id="balade-deauville" className="py-20 md:py-28 border-b border-white/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white text-left mb-14">
+            Nos offres <span className="uppercase text-brand-gradient">prestige</span>
+          </h2>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
+              <Image
+                src="/experience-deauville.png"
+                alt="Balade à Deauville en limousine"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
+              <div className="absolute bottom-4 left-4 right-4">
+                <Link href="/offres/deauville" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
+                  Voir l&apos;offre Balade à Deauville →
+                </Link>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <h3 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
+                Balade à Deauville
+              </h3>
+              <p className="text-white/60 mb-4">Trajets aller-retour. 6 h sur place, limousine à votre disposition. 2 bouteilles de champagne et softs inclus.</p>
+              <Link href="/offres/deauville" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm mb-4">
+                Découvrir l&apos;offre →
+              </Link>
+              <div className="max-w-2xl space-y-2 text-white/80 text-sm mb-6">
+                <p>Trajets aller-retour</p>
+                <p>6 h sur place, limousine à votre disposition</p>
+                <p>2 bouteilles de champagne incluses</p>
+                <p>Coca, Fanta à disposition</p>
+              </div>
+              <PriceGauge fixedPrice={950} subtitle="trajets aller-retour, 6 h sur place, 2 bouteilles de champagne et softs inclus" />
+            </div>
+          </div>
+
+          {/* Soirée striptease */}
+          <div id="striptease" className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
+              <Image
+                src="/experience-striptease-limousine.png"
+                alt="Soirée striptease en limousine"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
+              <div className="absolute bottom-4 left-4 right-4">
+                <Link href="/offres/striptease" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
+                  Voir l&apos;offre Soirée striptease →
+                </Link>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <h3 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
+                Soirée striptease
+              </h3>
+              <p className="text-white/60 mb-4">20 minutes dans la limousine avec nos stripteaseuses, show privé et confidentiel. Idéal pour vos EVJF, anniversaires ou soirées privées.</p>
+              <Link href="/offres/striptease" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm mb-3">
+                Découvrir l&apos;offre →
+              </Link>
+              <div className="mt-1">
+                <a
+                  href="https://wa.me/33699717759"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-brand-gradient text-white font-bold text-base hover:opacity-90 transition-opacity"
+                >
+                  Nous contacter pour un devis
+                </a>
               </div>
             </div>
           </div>
