@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import PhotoLightbox from "./PhotoLightbox";
 
-/** Liste de numéros de photo (1-19). Les null sont des cellules vides. n15 utilise n15.jpg, les autres n{N}.png */
+/** Liste de numéros de photo (1-20). Les null sont des cellules vides. n15 utilise n15.jpg, les autres n{N}.png */
 function photoSrc(num: number): string {
   return num === 15 ? "/n15.jpg" : `/n${num}.png`;
 }
@@ -53,6 +53,7 @@ export default function PhotoGallery({ items }: { items: (number | null)[] }) {
         })}
       </div>
       <PhotoLightbox
+        key={lightboxSrc ?? "closed"}
         src={lightboxSrc}
         alt={lightboxAlt}
         onClose={() => setLightboxSrc(null)}

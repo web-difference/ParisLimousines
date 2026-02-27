@@ -51,18 +51,23 @@ export default function OffreStriptease() {
             </div>
             <div>
               <h2 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
-                Un moment d&apos;exception
+                Un moment d&apos;exception en limousine
               </h2>
               <p className="text-white/70 mb-6 leading-relaxed">
-                20 minutes dans la limousine avec nos stripteaseuses pour un show privé et confidentiel. 
-                Ambiance feutrée, limousine privatisée : l&apos;option prestige pour vos EVJF, anniversaires ou soirées privées.
+                Offrez-vous une expérience exclusive et inoubliable à bord d&apos;une limousine entièrement privatisée. Pendant 20 minutes, profitez d&apos;un show privé assuré par nos stripteaseuses professionnelles, dans une ambiance feutrée, élégante et totalement confidentielle.
+                Un moment unique à partager entre amis pour marquer les esprits et célébrer vos événements comme il se doit.
+                Idéal pour un EVJF, un anniversaire ou une soirée privée, cette option prestige apportera une touche glamour et originale à votre événement.
               </p>
-              <ul className="space-y-2 text-white/80 text-sm mb-8">
-                <li>• 20 minutes de show dans la limousine</li>
-                <li>• Stripteaseuses professionnelles</li>
-                <li>• Limousine privatisée, confidentialité totale</li>
-                <li>• Idéal EVJF, anniversaires, soirées privées</li>
-              </ul>
+              <div className="space-y-2 text-white/80 text-sm mb-8">
+                <p className="font-semibold text-white">La prestation comprend :</p>
+                <ul className="space-y-1">
+                  <li>• 20 minutes de show privé dans la limousine</li>
+                  <li>• Stripteaseuses professionnelles</li>
+                  <li>• Limousine entièrement privatisée</li>
+                  <li>• Confidentialité et discrétion garanties</li>
+                  <li>• Idéal pour EVJF, anniversaires, soirées privées</li>
+                </ul>
+              </div>
               <a
                 href="https://wa.me/33699717759"
                 target="_blank"

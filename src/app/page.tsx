@@ -27,7 +27,8 @@ export default function Home() {
                 La <span className="text-brand-gradient font-black">STAR</span>, c&apos;est vous.
               </p>
               <p className="mt-3 md:mt-4 text-white/80 text-base md:text-lg font-light max-w-xl mx-auto leading-relaxed">
-                1 h 00 / 2 h 00 / 3 h 00 pendant lesquelles tout le monde vous regarde passer dans Paris. Jusqu&apos;à 8 passagers pour profiter entre amis du confort et de l&apos;ambiance incroyable de votre limousine. Toujours accompagné d&apos;une coupe de champagne à la main. <span className="font-semibold text-white">Un moment absolument magique.</span>
+                Pendant 1 h, 2 h ou 3 h, faites tourner les têtes dans tout Paris à bord de votre limousine privée avec chauffeur. Jusqu&apos;à 8 passagers pour profiter entre amis du confort et de l&apos;ambiance incroyable de votre limousine. Toujours accompagné d&apos;une coupe de champagne à la main.{" "}
+                <span className="font-semibold text-white">Un moment absolument magique.</span>
               </p>
               <a
                 href="https://wa.me/33699717759"
@@ -35,7 +36,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 mt-6 md:mt-8 border-2 border-[#F34FC7] text-[#F34FC7] font-semibold px-8 py-4 rounded-full bg-transparent hover:bg-brand-gradient hover:text-white hover:border-transparent transition-all duration-300 text-base md:text-lg"
               >
-                Je réserve ma place
+                Je réserve ma limousine
               </a>
             </div>
           </div>
@@ -48,19 +49,16 @@ export default function Home() {
           <h2 className="text-center font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white max-w-2xl mx-auto">
             Ce qui <span className="text-brand-gradient font-black">VOUS</span> attend
           </h2>
-          <p className="text-center mt-4 text-lg md:text-xl text-white/70 max-w-xl mx-auto">
-            Pour chaque moment qui compte
-          </p>
           <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
             <div className="md:col-span-3 text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#F34FC7]/30 transition-colors">
               <p className="text-4xl md:text-5xl font-black text-white">9 mètres de long</p>
               <p className="mt-2 text-white/90 font-medium">Limousine Lincoln blanche</p>
-              <p className="mt-1 text-white/50 text-sm">Prestige et confort</p>
+              <p className="mt-1 text-white/50 text-sm">Prestige &amp; confort</p>
             </div>
             <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#F34FC7]/30 transition-colors">
               <p className="text-4xl md:text-5xl font-black text-[#F34FC7]">3</p>
-              <p className="mt-2 text-white/90 font-medium">Écrans vidéo</p>
-              <p className="mt-1 text-white/50 text-sm">À bord</p>
+              <p className="mt-2 text-white/90 font-medium">écrans vidéo</p>
+              <p className="mt-1 text-white/50 text-sm">Ambiance cinéma à bord</p>
             </div>
             <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#F34FC7]/30 transition-colors">
               <p className="text-4xl md:text-5xl font-black"><span className="text-[#F34FC7]">1h</span> <span className="text-white">/</span> <span className="text-[#F34FC7]">2h</span> <span className="text-white">/</span> <span className="text-[#F34FC7]">3h</span></p>
@@ -69,8 +67,8 @@ export default function Home() {
             </div>
             <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#F34FC7]/30 transition-colors">
               <p className="text-4xl md:text-5xl font-black text-[#F34FC7]">8</p>
-              <p className="mt-2 text-white/90 font-medium">Passagers max</p>
-              <p className="mt-1 text-white/50 text-sm">Entre amis, en famille</p>
+              <p className="mt-2 text-white/90 font-medium">passagers max</p>
+              <p className="mt-1 text-white/50 text-sm">Entre amis ou en famille</p>
             </div>
             <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#F34FC7]/30 transition-colors">
               <p className="text-3xl md:text-4xl font-black text-[#F34FC7]">🍾</p>
@@ -79,13 +77,13 @@ export default function Home() {
             </div>
             <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#F34FC7]/30 transition-colors">
               <p className="text-3xl md:text-4xl font-black text-[#F34FC7]">✨</p>
-              <p className="mt-2 text-white/90 font-medium">Jeux de lumière</p>
-              <p className="mt-1 text-white/50 text-sm">Ambiance laser</p>
+              <p className="mt-2 text-white/90 font-medium">Jeux de lumière &amp; laser</p>
+              <p className="mt-1 text-white/50 text-sm">Atmosphère VIP</p>
             </div>
             <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#F34FC7]/30 transition-colors">
               <p className="text-3xl md:text-4xl font-black text-[#F34FC7]">🎵</p>
-              <p className="mt-2 text-white/90 font-medium">Musique 300 Watt</p>
-              <p className="mt-1 text-white/50 text-sm">Votre playlist à bord</p>
+              <p className="mt-2 text-white/90 font-medium">Son 300W</p>
+              <p className="mt-1 text-white/50 text-sm">Votre playlist personnalisée</p>
             </div>
           </div>
           <div className="mt-14 flex flex-wrap justify-center items-center gap-3">
@@ -134,8 +132,8 @@ export default function Home() {
               La soirée dont on parle encore.
             </h2>
             <p className="mt-8 text-xl md:text-2xl text-white/90 leading-relaxed">
-              Paris défile. Vous êtes à l&apos;intérieur. Coupe champagne en main, votre playlist, les lumières de la ville. 
-              Pas un trajet : un moment qu&apos;on n&apos;oublie jamais.
+              Paris défile. Vous êtes à l&apos;intérieur. Coupe de champagne en main, votre playlist, les lumières de la ville. Ce n&apos;est pas
+              un trajet. C&apos;est un souvenir.
             </p>
             <p className="mt-8 text-[#F34FC7] font-semibold text-lg">
               Ils se souviendront de votre arrivée.
@@ -216,7 +214,7 @@ export default function Home() {
                   Soirée crêpes à volonté
                 </h3>
                 <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed">
-                  Balade gourmande dans Paris. Crêpes à volonté à bord, champagne et bonne humeur. Une formule unique.
+                  Balade gourmande dans Paris. Crêpes à volonté à bord, cidre breton et bonne humeur. Une formule unique.
                 </p>
               </div>
             </article>

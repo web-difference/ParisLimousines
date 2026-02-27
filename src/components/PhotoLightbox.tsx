@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const springTransition = { type: "spring" as const, stiffness: 400, damping: 25 };
@@ -16,9 +16,9 @@ export default function PhotoLightbox({
 }) {
   const [isExiting, setIsExiting] = useState(false);
 
-  useEffect(() => {
-    if (src) setIsExiting(false);
-  }, [src]);
+  const startClose = useCallback(() => {
+    setIsExiting(true);
+  }, []);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -32,11 +32,7 @@ export default function PhotoLightbox({
       document.removeEventListener("keydown", handleEscape);
       document.body.style.overflow = "";
     };
-  }, [src]);
-
-  function startClose() {
-    setIsExiting(true);
-  }
+  }, [src, startClose]);
 
   function handlePhotoAnimationComplete() {
     if (isExiting) onClose();

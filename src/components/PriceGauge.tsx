@@ -26,7 +26,6 @@ function AnimatedPrice({
     const end = value;
     ref.current = value;
     if (start === end) {
-      setDisplayValue(value);
       return;
     }
 

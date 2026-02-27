@@ -52,18 +52,25 @@ export default function OffreDeauville() {
             </div>
             <div>
               <h2 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
-                Une journée d&apos;exception
+                L&apos;évasion prestige en limousine
               </h2>
               <p className="text-white/70 mb-6 leading-relaxed">
-                Trajets aller-retour Paris–Deauville en limousine. 6 h sur place avec la limousine à votre disposition. 
-                Champagne et softs à bord pour une escapade chic et inoubliable.
+                Offrez-vous une parenthèse d&apos;exception à Deauville et voyagez dans le confort absolu d&apos;une limousine avec chauffeur.
+                Au départ de Paris, profitez d&apos;un trajet aller-retour vers Deauville dans une ambiance chic et conviviale. Une fois sur place, votre limousine reste à votre disposition pendant 6 heures pour vous accompagner où vous le souhaitez : plage, casino, restaurants, shopping ou simple promenade.
+                À bord, deux bouteilles de champagne ainsi que des soft drinks sont inclus pour rendre votre escapade encore plus agréable.
               </p>
-              <ul className="space-y-2 text-white/80 text-sm mb-8">
-                <li>• Trajets aller-retour en limousine</li>
-                <li>• 6 h sur place, véhicule à disposition</li>
-                <li>• 2 bouteilles de champagne incluses</li>
-                <li>• Coca, Fanta à disposition</li>
-              </ul>
+              <p className="text-white/70 mb-4 leading-relaxed">
+                Que ce soit pour un anniversaire, une sortie entre amis, un moment romantique ou simplement pour le plaisir, vivez une expérience élégante, festive et inoubliable.
+              </p>
+              <div className="space-y-2 text-white/80 text-sm mb-8">
+                <p className="font-semibold text-white">La prestation comprend :</p>
+                <ul className="space-y-1">
+                  <li>• Trajet aller-retour Paris–Deauville en limousine</li>
+                  <li>• 6 heures sur place, véhicule avec chauffeur à disposition</li>
+                  <li>• 2 bouteilles de champagne incluses</li>
+                  <li>• Soft drinks (Coca-Cola, Fanta, etc.) à disposition</li>
+                </ul>
+              </div>
               <PriceGauge
                 fixedPrice={950}
                 subtitle="trajets aller-retour, 6 h sur place, 2 bouteilles de champagne et softs inclus"

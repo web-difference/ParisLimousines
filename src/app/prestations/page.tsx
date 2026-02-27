@@ -6,15 +6,17 @@ const experiences = [
   {
     id: "paris-by-night",
     title: "Paris by night",
-    description: "2h de balade dans Paris illuminé. Champagne, lumières, votre playlist. L'expérience star.",
+    description:
+      "2h de balade à travers Paris illuminé. La ville brille, les monuments défilent, les regards se tournent. Vous profitez simplement du moment. À bord : champagne, jeux de lumière, musique personnalisée et ambiance VIP. L’expérience star pour découvrir Paris comme on ne le voit jamais.",
     image: "/experience-paris-by-night.png",
     objectPosition: "object-top",
     tag: null,
   },
   {
     id: "soiree-etudiante",
-    title: "Soirée étudiante",
-    description: "Ambiance festive entre amis. 1h de balade uniquement. Jusqu'à 8, champagne, musique. La soirée dont tout le monde parle.",
+    title: "Soirée étudiante (Jeudi uniquement)",
+    description:
+      "Le jeudi, la limousine devient votre espace privilégié pour débuter la soirée avec élégance. 1 heure de balade exclusive à travers Paris. Jusqu’à 8 passagers. Champagne, musique, jeux de lumières et ambiance festive. Un moment de convivialité et de célébration entre amis dans un cadre original et prestigieux. L’expérience dont tout le monde parle – et qui reste gravée dans les mémoires.",
     image: "/experience-soiree-etudiante.png",
     objectPosition: "object-center",
     tag: "Jeudi uniquement",
@@ -22,7 +24,8 @@ const experiences = [
   {
     id: "soiree-crepes",
     title: "Soirée crêpes à volonté",
-    description: "Balade gourmande dans Paris. Crêpes à volonté à bord, champagne et bonne humeur. Une formule unique.",
+    description:
+      "Une expérience unique et gourmande à travers Paris. Dégustez des crêpes à volonté à bord de votre limousine Lincoln blanche. Champagne, ambiance chaleureuse et moment convivial entre amis ou en famille. Originale, festive et délicieusement différente.",
     image: "/experience-soiree-crepes.png",
     objectPosition: "object-bottom",
     tag: null,
@@ -30,15 +33,17 @@ const experiences = [
   {
     id: "mariage",
     title: "Mariage",
-    description: "Votre jour J. Lincoln blanche, chauffeur en costume. L'arrivée dont vous rêvez.",
+    description:
+      "Votre jour J mérite une arrivée spectaculaire. Limousine Lincoln blanche de 9 mètres, chauffeur en costume, prestige, élégance et raffinement. On s’occupe du trajet, vous profitez du moment, des photos, et de l’effet “waouh” à l’arrivée. L’entrée dont vous rêviez pour votre mariage.",
     image: "/experience-mariage.png",
     objectPosition: "object-top",
     tag: null,
   },
   {
     id: "evjf-evjg",
-    title: "EVJF / EVJG",
-    description: "Enterrement de vie de célibataire inoubliable. Ambiance décontractée ou glamour, à vous de choisir.",
+    title: "EVJF / EVG",
+    description:
+      "Un enterrement de vie de célibataire qui marque les esprits. Choisissez votre ambiance : glamour, fun ou totalement déjantée. Champagne, playlist personnalisée, fous rires et photos à gogo pendant toute la balade dans Paris. Un moment à part avant de célébrer le grand jour.",
     image: "/experience-evjf-evjg.png",
     objectPosition: "object-center",
     tag: null,
@@ -46,7 +51,8 @@ const experiences = [
   {
     id: "anniversaire",
     title: "Anniversaire",
-    description: "2h de balade. Gâteau d'anniversaire offert pour 8 personnes, champagne offert, champagne sans alcool sur demande. Coca, Fanta, Champomy à volonté.",
+    description:
+      "Offrez-vous un anniversaire d’exception à bord d’une limousine entièrement privatisée. Pendant 2 heures, jusqu’à 8 convives profitent d’une balade exclusive à travers Paris, dans un cadre raffiné et intimiste. Gâteau d’anniversaire offert, véritable champagne pour les adultes (ou champagne sans alcool sur demande), ainsi que soft drinks à volonté. Chaque instant est pensé pour sublimer la célébration : soufflez les bougies, portez un toast, chantez et laissez Paris défiler sous vos yeux. Une expérience unique, élégante et inoubliable, qui restera gravée dans les mémoires.",
     image: "/experience-anniversaire.png",
     objectPosition: "object-center",
     tag: null,
@@ -221,7 +227,7 @@ export default function Prestations() {
             Un pur moment de <span className="text-brand-gradient font-black uppercase">plaisir</span> !
           </h2>
           <PhotoGallery
-            items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]}
+            items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]}
           />
         </div>
       </section>
