@@ -2,52 +2,76 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import Starfield from "./Starfield";
 
 const leftNavLinks = [
-  { href: "/", label: "Accueil" },
-  { href: "/prestations", label: "Expériences" },
+  { href: "/", labelFr: "Accueil", labelEn: "Home" },
+  { href: "/prestations", labelFr: "Expériences", labelEn: "Experiences" },
 ];
 
 const rightNavLinks = [
-  { href: "/tarifs", label: "Tarifs" },
-  { href: "/contact", label: "Contact" },
+  { href: "/tarifs", labelFr: "Tarifs", labelEn: "Pricing" },
+  { href: "/contact", labelFr: "Contact", labelEn: "Contact" },
 ];
 
 function isActive(pathname: string, href: string) {
-  if (href === "/") return pathname === "/";
+  if (href === "/" || href === "/en") return pathname === href;
   return pathname.startsWith(href);
+}
+
+function pathForLocale(locale: "fr" | "en", path: string) {
+  if (locale === "fr") return path;
+  return path === "/" ? "/en" : `/en${path}`;
 }
 
 export default function Header() {
   const pathname = usePathname();
+  const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const locale = pathname.startsWith("/en") ? "en" : "fr";
+
+  const goToLocale = (newLocale: "fr" | "en") => {
+    if (newLocale === "fr") {
+      const path = pathname.replace(/^\/en\/?/, "/") || "/";
+      router.push(path);
+    } else {
+      if (pathname.startsWith("/en")) return;
+      const path = pathname === "/" ? "/en" : `/en${pathname}`;
+      router.push(path);
+    }
+  };
 
   return (
-    <header className="relative w-full border-b border-white/10 overflow-hidden bg-[#0a0a0a] -mt-px">
-      <Starfield />
-      <div className="absolute inset-0 bg-[#0a0a0a]/60 pointer-events-none" aria-hidden />
+    <header className="relative w-full border-b border-white/10 overflow-visible bg-[#0a0a0a] -mt-px">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
+        <Starfield />
+        <div className="absolute inset-0 bg-[#0a0a0a]/60" />
+      </div>
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="relative flex items-center justify-center h-24 md:h-36 gap-12 md:gap-20 lg:gap-32">
           {/* Left nav */}
           <ul className="hidden md:flex items-center gap-12 md:gap-20 lg:gap-28">
-            {leftNavLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`text-lg md:text-xl font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, link.href) ? "text-brand-gradient" : "text-white hover:text-brand-gradient"}`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {leftNavLinks.map((link) => {
+              const href = pathForLocale(locale, link.href);
+              const label = locale === "en" ? link.labelEn : link.labelFr;
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={href}
+                    className={`text-lg md:text-xl font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, href) ? "text-brand-gradient" : "text-white hover:text-brand-gradient"}`}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
 
           {/* Logo - centered */}
-          <Link href="/" className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-0 md:translate-x-0 md:top-0 md:translate-y-0 flex-shrink-0 flex items-center justify-center w-[min(320px,72vw)] md:w-auto">
+          <Link href={pathForLocale(locale, "/")} className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-0 md:translate-x-0 md:top-0 md:translate-y-0 shrink-0 flex items-center justify-center w-[min(320px,72vw)] md:w-auto">
             <Image
               src="/logo3.png"
               alt="Star Limousine Paris"
@@ -60,16 +84,20 @@ export default function Header() {
 
           {/* Right nav */}
           <ul className="hidden md:flex items-center gap-12 md:gap-20 lg:gap-28">
-            {rightNavLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`text-lg md:text-xl font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, link.href) ? "text-brand-gradient" : "text-white hover:text-brand-gradient"}`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {rightNavLinks.map((link) => {
+              const href = pathForLocale(locale, link.href);
+              const label = locale === "en" ? link.labelEn : link.labelFr;
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={href}
+                    className={`text-lg md:text-xl font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, href) ? "text-brand-gradient" : "text-white hover:text-brand-gradient"}`}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
             <li>
               <a
                 href="https://wa.me/33699717759"
@@ -78,8 +106,30 @@ export default function Header() {
                 className="inline-flex items-center gap-3 text-xl md:text-2xl font-black px-5 py-2.5 rounded-full bg-brand-gradient text-white hover:opacity-90 border border-[#F34FC7]/50 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors"
               >
                 <FaCalendarAlt className="w-7 h-7 shrink-0" aria-hidden />
-                RÉSERVER
+                {locale === "en" ? "BOOK" : "RÉSERVER"}
               </a>
+            </li>
+            <li>
+              <div className="flex items-center gap-0.5 rounded-full bg-white px-2 py-1.5 shadow-[0_2px_8px_rgba(0,0,0,0.08)] ring-1 ring-gray-200/90 ring-inset">
+                <button
+                  type="button"
+                  onClick={() => goToLocale("fr")}
+                  className={`p-1.5 rounded-full text-[1.75rem] leading-none transition-opacity focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/40 focus:ring-offset-2 focus:ring-offset-white ${locale === "fr" ? "opacity-100" : "opacity-40 hover:opacity-60"}`}
+                  aria-label="Français"
+                  title="Français"
+                >
+                  <span role="img" aria-hidden>🇫🇷</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => goToLocale("en")}
+                  className={`p-1.5 rounded-full text-[1.75rem] leading-none transition-opacity focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/40 focus:ring-offset-2 focus:ring-offset-white ${locale === "en" ? "opacity-100" : "opacity-40 hover:opacity-60"}`}
+                  aria-label="English (US)"
+                  title="English (US)"
+                >
+                  <span role="img" aria-hidden>🇺🇸</span>
+                </button>
+              </div>
             </li>
           </ul>
 
@@ -106,17 +156,21 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden py-6 border-t border-white/10">
             <ul className="flex flex-col gap-5">
-              {[...leftNavLinks, ...rightNavLinks].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={`block text-lg font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, link.href) ? "text-brand-gradient" : "text-white hover:text-brand-gradient"}`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {[...leftNavLinks, ...rightNavLinks].map((link) => {
+                const href = pathForLocale(locale, link.href);
+                const label = locale === "en" ? link.labelEn : link.labelFr;
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={href}
+                      className={`block text-lg font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, href) ? "text-brand-gradient" : "text-white hover:text-brand-gradient"}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                );
+              })}
               <li>
                 <a
                   href="https://wa.me/33699717759"
@@ -126,8 +180,30 @@ export default function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <FaCalendarAlt className="w-7 h-7 shrink-0" aria-hidden />
-                  RÉSERVER
+                  {locale === "en" ? "BOOK" : "RÉSERVER"}
                 </a>
+              </li>
+              <li className="pt-2">
+                <div className="inline-flex items-center gap-0.5 rounded-full bg-white px-2 py-1.5 shadow-[0_2px_8px_rgba(0,0,0,0.08)] ring-1 ring-gray-200/90 ring-inset">
+                  <button
+                    type="button"
+                    onClick={() => goToLocale("fr")}
+                    className={`p-1.5 rounded-full text-[1.75rem] leading-none transition-opacity focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/40 focus:ring-offset-2 focus:ring-offset-white ${locale === "fr" ? "opacity-100" : "opacity-40 hover:opacity-60"}`}
+                    aria-label="Français"
+                    title="Français"
+                  >
+                    <span role="img" aria-hidden>🇫🇷</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => goToLocale("en")}
+                    className={`p-1.5 rounded-full text-[1.75rem] leading-none transition-opacity focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/40 focus:ring-offset-2 focus:ring-offset-white ${locale === "en" ? "opacity-100" : "opacity-40 hover:opacity-60"}`}
+                    aria-label="English (US)"
+                    title="English (US)"
+                  >
+                    <span role="img" aria-hidden>🇺🇸</span>
+                  </button>
+                </div>
               </li>
             </ul>
           </div>

@@ -1,18 +1,47 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function NewsletterBanner() {
+  const pathname = usePathname();
+  const locale = pathname.startsWith("/en") ? "en" : "fr";
   const [dismissed, setDismissed] = useState(false);
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
+  const t = locale === "en" ? {
+    mobileTitle: "First booking",
+    mobileCta: "Subscribe to the newsletter",
+    desktop: "- 10% off your first booking when you subscribe to the newsletter",
+    placeholder: "your@email.com",
+    emailLabel: "Email address",
+    success: "Email sent!",
+    loading: "Sending…",
+    cta: "Get it",
+    errorSend: "Error sending.",
+    errorNetwork: "Network error.",
+    close: "Close",
+  } : {
+    mobileTitle: "1ère résa",
+    mobileCta: "Inscrivez-vous à la newsletter",
+    desktop: "de réduction sur votre première réservation en vous inscrivant à la newsletter",
+    placeholder: "votre@email.com",
+    emailLabel: "Adresse email",
+    success: "Email envoyé !",
+    loading: "Envoi…",
+    cta: "Profiter",
+    errorSend: "Erreur lors de l'envoi.",
+    errorNetwork: "Erreur réseau.",
+    close: "Fermer",
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (status === "loading") return;
     if (!email.trim()) {
-      setErrorMsg("Veuillez renseigner votre email.");
+      setErrorMsg(locale === "en" ? "Please enter your email." : "Veuillez renseigner votre email.");
       return;
     }
     setErrorMsg("");
@@ -26,13 +55,13 @@ export default function NewsletterBanner() {
       const data = await res.json().catch(() => ({}));
       if (!res.ok) {
         setStatus("error");
-        setErrorMsg(data.error || "Erreur lors de l'envoi.");
+        setErrorMsg(data.error || t.errorSend);
         return;
       }
       setStatus("success");
     } catch {
       setStatus("error");
-      setErrorMsg("Erreur réseau.");
+      setErrorMsg(t.errorNetwork);
     }
   };
 
@@ -45,12 +74,12 @@ export default function NewsletterBanner() {
       <div className="relative container mx-auto px-4 sm:px-6 py-3 pr-12 sm:pr-12 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
         <p className="text-white font-semibold text-center">
           <span className="sm:hidden block text-xs leading-tight">
-            <span className="text-[#F34FC7] font-black">-10%</span> 1ère résa
+            <span className="text-[#F34FC7] font-black">-10%</span> {t.mobileTitle}
             <br />
-            <span className="font-medium">Inscrivez-vous à la newsletter</span>
+            <span className="font-medium">{t.mobileCta}</span>
           </span>
           <span className="hidden sm:inline text-sm sm:text-base">
-            <span className="text-[#F34FC7] font-black">- 10%</span> de réduction sur votre première réservation en vous inscrivant à la newsletter
+            <span className="text-[#F34FC7] font-black">- 10%</span> {t.desktop}
           </span>
         </p>
         <form
@@ -61,7 +90,7 @@ export default function NewsletterBanner() {
           <div className="flex flex-col sm:flex-row items-center gap-2 w-full">
             <input
               type="email"
-              placeholder="votre@email.com"
+              placeholder={t.placeholder}
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -69,18 +98,18 @@ export default function NewsletterBanner() {
               }}
               disabled={status === "loading" || status === "success"}
               className="flex-1 min-w-0 w-full px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/50 focus:border-[#F34FC7]/50 disabled:opacity-70"
-              aria-label="Adresse email"
+              aria-label={t.emailLabel}
               aria-invalid={!!errorMsg}
             />
             {status === "success" ? (
-              <p className="text-green-400 text-sm font-medium whitespace-nowrap w-full sm:w-auto text-center">Email envoyé !</p>
+              <p className="text-green-400 text-sm font-medium whitespace-nowrap w-full sm:w-auto text-center">{t.success}</p>
             ) : (
               <button
                 type="submit"
                 disabled={status === "loading"}
                 className="shrink-0 w-full sm:w-auto px-5 py-2 rounded-full bg-brand-gradient text-white text-sm font-bold hover:opacity-90 disabled:opacity-70 transition-colors whitespace-nowrap"
               >
-                {status === "loading" ? "Envoi…" : "Profiter"}
+                {status === "loading" ? t.loading : t.cta}
               </button>
             )}
           </div>
@@ -93,7 +122,7 @@ export default function NewsletterBanner() {
         type="button"
         onClick={() => setDismissed(true)}
         className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-white/60 hover:text-white transition-colors rounded-full hover:bg-white/10"
-        aria-label="Fermer"
+        aria-label={t.close}
       >
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

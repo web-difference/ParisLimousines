@@ -52,10 +52,38 @@ function AnimatedPrice({
   );
 }
 
-export default function PriceGauge({ fixedPrice, subtitle }: { fixedPrice?: number; subtitle?: string }) {
+const labels = {
+  fr: {
+    howMany: "Combien de personnes ?",
+    person: "personne",
+    persons: "personnes",
+    chooseDuration: "Choisissez la durée",
+    perPerson: "€/pers.",
+    book: "Réserver",
+  },
+  en: {
+    howMany: "How many people?",
+    person: "person",
+    persons: "people",
+    chooseDuration: "Choose duration",
+    perPerson: "€/person",
+    book: "Book",
+  },
+};
+
+export default function PriceGauge({
+  fixedPrice,
+  subtitle,
+  locale = "fr",
+}: {
+  fixedPrice?: number;
+  subtitle?: string;
+  locale?: "fr" | "en";
+}) {
   const [persons, setPersons] = useState<number | null>(null);
   const [hours, setHours] = useState(2);
   const [step2Visible, setStep2Visible] = useState(false);
+  const t = labels[locale];
 
   const price = fixedPrice ?? PRICES[hours];
   const pricePerPerson = persons ? price / persons : 0;
@@ -84,7 +112,7 @@ export default function PriceGauge({ fixedPrice, subtitle }: { fixedPrice?: numb
         }`}
       >
         <div className="px-8 py-10 md:px-12 md:py-12">
-          <p className="text-white/90 text-xl md:text-2xl font-medium mb-6">Combien de personnes ?</p>
+          <p className="text-white/90 text-xl md:text-2xl font-medium mb-6">{t.howMany}</p>
           <div className="grid grid-cols-4 gap-3">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((p) => (
               <button
@@ -114,12 +142,12 @@ export default function PriceGauge({ fixedPrice, subtitle }: { fixedPrice?: numb
           onClick={handleBack}
           className="text-white/40 hover:text-[#F34FC7] text-sm mb-6 transition-colors inline-flex items-center gap-1 w-fit"
         >
-          ← {persons} {persons === 1 ? "personne" : "personnes"}
+          ← {persons} {persons === 1 ? t.person : t.persons}
         </button>
 
         {showHours && (
           <>
-            <p className="text-white/80 text-base mb-3">Choisissez la durée</p>
+            <p className="text-white/80 text-base mb-3">{t.chooseDuration}</p>
             <div className="relative mb-5">
               <input
                 type="range"
@@ -156,7 +184,7 @@ export default function PriceGauge({ fixedPrice, subtitle }: { fixedPrice?: numb
           <span className="text-white/70 text-xl">€</span>
           {persons !== null && (
             <span className="text-white/50 text-sm">
-              (<AnimatedPrice value={pricePerPerson} decimals={2} /> €/pers.)
+              (<AnimatedPrice value={pricePerPerson} decimals={2} /> {t.perPerson})
             </span>
           )}
         </div>
@@ -169,7 +197,7 @@ export default function PriceGauge({ fixedPrice, subtitle }: { fixedPrice?: numb
           rel="noopener noreferrer"
           className="mt-6 w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-brand-gradient text-white font-bold text-base hover:opacity-90 transition-all"
         >
-          Réserver
+          {t.book}
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
