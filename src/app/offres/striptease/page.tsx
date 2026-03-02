@@ -5,6 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Soirée striptease en limousine | Offre prestige | Star Limousine Paris",
   description: "20 minutes dans la limousine avec nos stripteaseuses, show privé et confidentiel. EVJF, anniversaires, soirées privées.",
+  alternates: { canonical: "/offres/striptease" },
 };
 
 export default function OffreStriptease() {

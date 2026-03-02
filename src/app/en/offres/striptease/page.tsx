@@ -5,6 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Striptease evening in a limousine | Prestige offer | Star Limousine Paris",
   description: "20 minutes in the limousine with our performers, private and confidential show. Bachelorette parties, birthdays, private events.",
+  alternates: { canonical: "/en/offres/striptease" },
 };
 
 export default function EnOffreStriptease() {

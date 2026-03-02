@@ -6,8 +6,12 @@ import NewsletterBanner from "@/components/NewsletterBanner";
 import NewsletterSection from "@/components/NewsletterSection";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.star-limousine-paris.com"),
   title: "Star Limousine Paris | Expérience Prestige en Limousine Blanche de Luxe",
   description: "Vivez une expérience d'exception à Paris à bord d'une limousine blanche de 9 mètres. Anniversaire, EVJF, mariage — 2h de luxe pour jusqu'à 8 personnes.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({

@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import PhotoGallery from "@/components/PhotoGallery";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/en" },
+};
 
 export default function EnHome() {
   return (

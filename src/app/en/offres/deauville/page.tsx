@@ -6,6 +6,7 @@ import PriceGauge from "@/components/PriceGauge";
 export const metadata: Metadata = {
   title: "Deauville trip | Prestige offer | Star Limousine Paris",
   description: "Prestige day by limousine: Paris–Deauville round-trip, 6 hours on site, champagne and soft drinks included. The chic escape.",
+  alternates: { canonical: "/en/offres/deauville" },
 };
 
 export default function EnOffreDeauville() {

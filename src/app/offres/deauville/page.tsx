@@ -6,6 +6,7 @@ import PriceGauge from "@/components/PriceGauge";
 export const metadata: Metadata = {
   title: "Balade à Deauville | Offre prestige | Star Limousine Paris",
   description: "Journée prestige en limousine : Paris–Deauville aller-retour, 6 h sur place, champagne et softs inclus. L'évasion chic.",
+  alternates: { canonical: "/offres/deauville" },
 };
 
 export default function OffreDeauville() {
