@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://star-limousine-paris.com
+
+# Sitemaps
+Sitemap: https://star-limousine-paris.com/sitemap.xml
