@@ -342,6 +342,73 @@ export default function EnTarifs() {
               </div>
             </div>
           </div>
+
+          <div id="disneyland" className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-16">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
+              <Image
+                src="/experience-disneyland.png"
+                alt="Disneyland transfer in a limousine"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
+              <div className="absolute bottom-4 left-4 right-4">
+                <Link href="/en/offres/disneyland" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
+                  View Disneyland transfer offer →
+                </Link>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 space-y-6">
+              <div>
+                <h3 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
+                  Disneyland Paris transfer
+                </h3>
+                <p className="text-white/60 mb-2">
+                  Paris hotel pickup in the morning, direct transfer with no stops to Disneyland Park entrance. Round-trip option: the limousine waits at the park entrance at the end of your day for the return to your Paris hotel.
+                </p>
+                <Link href="/en/offres/disneyland" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm">
+                  Discover the offer →
+                </Link>
+              </div>
+
+              {/* Option 1 - One-way */}
+              <div className="p-6 rounded-2xl border-2 border-[#F34FC7]/30 bg-white/[0.02] hover:border-[#F34FC7]/40 transition-colors">
+                <h4 className="font-display text-lg font-semibold text-white mb-3">
+                  One-way
+                </h4>
+                <p className="text-white/60 text-sm mb-4">
+                  Max 8 passengers, no champagne
+                </p>
+                <div className="flex flex-wrap items-baseline gap-3">
+                  <span className="font-display text-2xl font-semibold text-white">€250</span>
+                </div>
+              </div>
+
+              {/* Option 2 - Round-trip */}
+              <div className="p-6 rounded-2xl border-2 border-[#F34FC7]/30 bg-white/[0.02] hover:border-[#F34FC7]/40 transition-colors">
+                <h4 className="font-display text-lg font-semibold text-white mb-3">
+                  Round-trip
+                </h4>
+                <p className="text-white/60 text-sm mb-4">
+                  Max 8 passengers, no champagne
+                </p>
+                <div className="flex flex-wrap items-baseline gap-3">
+                  <span className="font-display text-2xl font-semibold text-white">€450</span>
+                </div>
+              </div>
+
+              <a
+                href="https://wa.me/33699717759"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-brand-gradient text-white font-bold text-base hover:opacity-90 transition-opacity"
+              >
+                Book
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -363,10 +430,11 @@ export default function EnTarifs() {
               { id: "anniversaire", img: "/experience-anniversaire.png", title: "Birthday" },
               { id: "balade-deauville", img: "/experience-deauville.png", title: "Deauville trip" },
               { id: "striptease", img: "/experience-striptease-limousine.png", title: "Striptease evening" },
+              { id: "disneyland", img: "/experience-disneyland.png", title: "Disneyland Paris" },
             ].map((exp) => (
               <Link
                 key={exp.id}
-                href={exp.id === "balade-deauville" ? "/en/offres/deauville" : exp.id === "striptease" ? "/en/offres/striptease" : `/en/prestations#${exp.id}`}
+                href={exp.id === "balade-deauville" ? "/en/offres/deauville" : exp.id === "striptease" ? "/en/offres/striptease" : exp.id === "disneyland" ? "/en/offres/disneyland" : `/en/prestations#${exp.id}`}
                 className="group block rounded-xl overflow-hidden border border-white/10 hover:border-[#F34FC7]/40 transition-colors"
               >
                 <div className="aspect-square relative">

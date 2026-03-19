@@ -9,6 +9,7 @@ const routes = [
   "/contact",
   "/offres/deauville",
   "/offres/striptease",
+  "/offres/disneyland",
   "/cgu",
   "/cgv",
   "/mentions-legales",
@@ -19,6 +20,7 @@ const routes = [
   "/en/contact",
   "/en/offres/deauville",
   "/en/offres/striptease",
+  "/en/offres/disneyland",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

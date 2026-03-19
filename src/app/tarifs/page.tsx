@@ -353,6 +353,74 @@ export default function Tarifs() {
               </div>
             </div>
           </div>
+
+          {/* Transfert Disneyland */}
+          <div id="disneyland" className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-16">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
+              <Image
+                src="/experience-disneyland.png"
+                alt="Transfert Disneyland en limousine"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
+              <div className="absolute bottom-4 left-4 right-4">
+                <Link href="/offres/disneyland" className="text-white/90 hover:text-white text-sm font-medium transition-colors">
+                  Voir l&apos;offre Transfert Disneyland →
+                </Link>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 space-y-6">
+              <div>
+                <h3 className="font-display text-2xl md:text-3xl font-semibold text-white mb-4">
+                  Transfert Disneyland
+                </h3>
+                <p className="text-white/60 mb-2">
+                  Prise en charge à l&apos;hôtel à Paris le matin, transfert direct sans arrêt à l&apos;entrée du parc. Option aller-retour : la limousine vous attend à la fin de la journée.
+                </p>
+                <Link href="/offres/disneyland" className="inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm">
+                  Découvrir l&apos;offre →
+                </Link>
+              </div>
+
+              {/* Option 1 - Aller simple */}
+              <div className="p-6 rounded-2xl border-2 border-[#F34FC7]/30 bg-white/[0.02] hover:border-[#F34FC7]/40 transition-colors">
+                <h4 className="font-display text-lg font-semibold text-white mb-3">
+                  Aller simple
+                </h4>
+                <p className="text-white/60 text-sm mb-4">
+                  Max 8 passagers, sans champagne
+                </p>
+                <div className="flex flex-wrap items-baseline gap-3">
+                  <span className="font-display text-2xl font-semibold text-white">250 €</span>
+                </div>
+              </div>
+
+              {/* Option 2 - Aller-retour */}
+              <div className="p-6 rounded-2xl border-2 border-[#F34FC7]/30 bg-white/[0.02] hover:border-[#F34FC7]/40 transition-colors">
+                <h4 className="font-display text-lg font-semibold text-white mb-3">
+                  Aller-retour
+                </h4>
+                <p className="text-white/60 text-sm mb-4">
+                  Max 8 passagers, sans champagne
+                </p>
+                <div className="flex flex-wrap items-baseline gap-3">
+                  <span className="font-display text-2xl font-semibold text-white">450 €</span>
+                </div>
+              </div>
+
+              <a
+                href="https://wa.me/33699717759"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-brand-gradient text-white font-bold text-base hover:opacity-90 transition-opacity"
+              >
+                Réserver
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -375,10 +443,11 @@ export default function Tarifs() {
               { id: "anniversaire", img: "/experience-anniversaire.png", title: "Anniversaire" },
               { id: "balade-deauville", img: "/experience-deauville.png", title: "Balade à Deauville" },
               { id: "striptease", img: "/experience-striptease-limousine.png", title: "Soirée striptease" },
+              { id: "disneyland", img: "/experience-disneyland.png", title: "Transfert Disneyland" },
             ].map((exp) => (
               <Link
                 key={exp.id}
-                href={exp.id === "balade-deauville" ? "/offres/deauville" : exp.id === "striptease" ? "/offres/striptease" : `/prestations#${exp.id}`}
+                href={exp.id === "balade-deauville" ? "/offres/deauville" : exp.id === "striptease" ? "/offres/striptease" : exp.id === "disneyland" ? "/offres/disneyland" : `/prestations#${exp.id}`}
                 className="group block rounded-xl overflow-hidden border border-white/10 hover:border-[#F34FC7]/40 transition-colors"
               >
                 <div className="aspect-square relative">

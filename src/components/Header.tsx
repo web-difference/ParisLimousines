@@ -10,10 +10,10 @@ import Starfield from "./Starfield";
 const leftNavLinks = [
   { href: "/", labelFr: "Accueil", labelEn: "Home" },
   { href: "/prestations", labelFr: "Expériences", labelEn: "Experiences" },
+  { href: "/tarifs", labelFr: "Tarifs", labelEn: "Pricing" },
 ];
 
 const rightNavLinks = [
-  { href: "/tarifs", labelFr: "Tarifs", labelEn: "Pricing" },
   { href: "/contact", labelFr: "Contact", labelEn: "Contact" },
 ];
 
@@ -50,10 +50,10 @@ export default function Header() {
         <Starfield />
         <div className="absolute inset-0 bg-[#0a0a0a]/60" />
       </div>
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="relative flex items-center justify-center h-24 md:h-36 gap-12 md:gap-20 lg:gap-32">
-          {/* Left nav */}
-          <ul className="hidden md:flex items-center gap-12 md:gap-20 lg:gap-28">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 min-w-0">
+        <nav className="relative flex items-center justify-between h-24 xl:h-36 gap-4 min-w-0 xl:pl-6 xl:pr-6">
+          {/* Gauche | Logo (centré) | Droite — padding gauche/droite identique */}
+          <ul className="hidden xl:flex flex-1 items-center justify-end gap-6 xl:gap-8 shrink-0 min-w-0">
             {leftNavLinks.map((link) => {
               const href = pathForLocale(locale, link.href);
               const label = locale === "en" ? link.labelEn : link.labelFr;
@@ -61,7 +61,7 @@ export default function Header() {
                 <li key={link.href}>
                   <Link
                     href={href}
-                    className={`text-lg md:text-xl font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors ${isActive(pathname, href) ? "text-brand-gradient" : "text-white hover:text-brand-gradient"}`}
+                    className={`text-lg md:text-xl font-black drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors whitespace-nowrap ${isActive(pathname, href) ? "text-brand-gradient" : "text-white hover:text-brand-gradient"}`}
                   >
                     {label}
                   </Link>
@@ -70,20 +70,20 @@ export default function Header() {
             })}
           </ul>
 
-          {/* Logo - centered */}
-          <Link href={pathForLocale(locale, "/")} className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:relative md:left-0 md:translate-x-0 md:top-0 md:translate-y-0 shrink-0 flex items-center justify-center w-[min(320px,72vw)] md:w-auto">
+          {/* Logo — toujours centré entre les deux colonnes */}
+          <Link href={pathForLocale(locale, "/")} className="shrink-0 flex items-center justify-center px-4 xl:px-8">
             <Image
               src="/logo3.png"
               alt="Star Limousine Paris"
               width={280}
               height={95}
-              className="h-28 w-auto max-w-full object-contain object-center md:h-40"
+              className="h-20 sm:h-24 xl:h-36 w-auto max-w-[45vw] sm:max-w-[200px] xl:max-w-[280px] object-contain"
               priority
             />
           </Link>
 
           {/* Right nav */}
-          <ul className="hidden md:flex items-center gap-12 md:gap-20 lg:gap-28">
+          <ul className="hidden xl:flex flex-1 items-center justify-start gap-6 xl:gap-8 shrink-0 min-w-0">
             {rightNavLinks.map((link) => {
               const href = pathForLocale(locale, link.href);
               const label = locale === "en" ? link.labelEn : link.labelFr;
@@ -103,7 +103,7 @@ export default function Header() {
                 href="https://wa.me/33699717759"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 text-xl md:text-2xl font-black px-5 py-2.5 rounded-full bg-brand-gradient text-white hover:opacity-90 border border-[#F34FC7]/50 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors"
+                className="inline-flex items-center gap-2 lg:gap-3 text-base lg:text-xl xl:text-2xl font-black px-4 py-2 lg:px-5 lg:py-2.5 rounded-full bg-brand-gradient text-white hover:opacity-90 border border-[#F34FC7]/50 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] transition-colors shrink-0"
               >
                 <FaCalendarAlt className="w-7 h-7 shrink-0" aria-hidden />
                 {locale === "en" ? "BOOK" : "RÉSERVER"}
@@ -133,8 +133,8 @@ export default function Header() {
             </li>
           </ul>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden ml-auto">
+          {/* Mobile menu button - visible < xl */}
+          <div className="xl:hidden ml-auto shrink-0">
             <button
               type="button"
               className="p-2 text-white"
@@ -154,7 +154,7 @@ export default function Header() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-6 border-t border-white/10">
+          <div className="xl:hidden py-6 border-t border-white/10">
             <ul className="flex flex-col gap-5">
               {[...leftNavLinks, ...rightNavLinks].map((link) => {
                 const href = pathForLocale(locale, link.href);

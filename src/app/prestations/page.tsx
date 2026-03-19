@@ -213,6 +213,30 @@ export default function Prestations() {
                 </Link>
               </div>
             </article>
+            <article className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#F34FC7]/30 transition-colors">
+              <div className="aspect-[4/3] relative overflow-hidden bg-black/40">
+                <Image
+                  src="/experience-disneyland.png"
+                  alt="Transfert Disneyland en limousine"
+                  fill
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden />
+              </div>
+              <div className="p-6 md:p-8">
+                <h3 className="font-display text-xl md:text-2xl font-semibold text-white">
+                  Transfert Disneyland
+                </h3>
+                <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed">
+                  Paris → parc Disneyland. Aller simple ou aller-retour. Prise en charge à l&apos;hôtel, transfert direct sans arrêt.
+                </p>
+                <Link href="/offres/disneyland" className="mt-4 inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm">
+                  Découvrir l&apos;offre →
+                </Link>
+              </div>
+            </article>
           </div>
           <div className="mt-12 flex justify-center">
             <Link

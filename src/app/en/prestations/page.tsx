@@ -211,6 +211,30 @@ export default function EnPrestations() {
                 </Link>
               </div>
             </article>
+            <article className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#F34FC7]/30 transition-colors">
+              <div className="aspect-[4/3] relative overflow-hidden bg-black/40">
+                <Image
+                  src="/experience-disneyland.png"
+                  alt="Disneyland transfer in a limousine"
+                  fill
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden />
+              </div>
+              <div className="p-6 md:p-8">
+                <h3 className="font-display text-xl md:text-2xl font-semibold text-white">
+                  Disneyland
+                </h3>
+                <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed">
+                  Paris → Disneyland Park. One-way or round-trip. Hotel pickup, direct transfer with no stops.
+                </p>
+                <Link href="/en/offres/disneyland" className="mt-4 inline-block text-[#F34FC7] font-medium hover:text-[#F34FC7]/90 text-sm">
+                  Discover the offer →
+                </Link>
+              </div>
+            </article>
           </div>
           <div className="mt-12 flex justify-center">
             <Link

@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import NewsletterBanner from "@/components/NewsletterBanner";
-import NewsletterSection from "@/components/NewsletterSection";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.star-limousine-paris.com"),
@@ -31,13 +29,9 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-screen flex-col antialiased bg-[#0a0a0a] text-white">
         <div className="fixed top-0 left-0 right-0 z-50 w-full bg-[#0a0a0a]">
-          <div className="hidden md:block">
-            <NewsletterBanner />
-          </div>
           <Header />
         </div>
         <main className="flex-1 pt-24 md:pt-[220px]">{children}</main>
-        <NewsletterSection />
         <Footer />
       </body>
     </html>
