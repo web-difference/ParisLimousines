@@ -31,12 +31,22 @@ export default function AutoHeroSlider({
     update();
 
     const onChange = () => update();
-    if ("addEventListener" in mql) mql.addEventListener("change", onChange);
-    else mql.addListener(onChange);
+
+    // Certains navigateurs n'exposent pas addListener/removeListener dans les types TS.
+    // On cast pour gérer proprement les 2 cas sans bloquer la compilation.
+    const mqlAny = mql as unknown as {
+      addEventListener?: (type: "change", listener: () => void) => void;
+      removeEventListener?: (type: "change", listener: () => void) => void;
+      addListener?: (listener: () => void) => void;
+      removeListener?: (listener: () => void) => void;
+    };
+
+    if (mqlAny.addEventListener) mqlAny.addEventListener("change", onChange);
+    else if (mqlAny.addListener) mqlAny.addListener(onChange);
 
     return () => {
-      if ("removeEventListener" in mql) mql.removeEventListener("change", onChange);
-      else mql.removeListener(onChange);
+      if (mqlAny.removeEventListener) mqlAny.removeEventListener("change", onChange);
+      else if (mqlAny.removeListener) mqlAny.removeListener(onChange);
     };
   }, []);
 
