@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import PhotoGallery from "@/components/PhotoGallery";
+import AutoHeroSlider from "@/components/AutoHeroSlider";
 
 export default function Home() {
   return (
@@ -8,16 +9,14 @@ export default function Home() {
       {/* Hero - Image limousine (plein écran sous le header) */}
       <section className="relative w-full -mt-0 md:-mt-[220px] overflow-hidden">
         <div className="relative w-full min-h-[72vh] md:min-h-0 md:aspect-[21/9] overflow-hidden">
-          <Image
-            src="/newimage.png"
-            alt="Star Limousine Paris"
-            width={2560}
-            height={1090}
-            sizes="100vw"
-            className="w-full h-full object-cover object-top"
-            priority
-            quality={100}
-            unoptimized
+          <AutoHeroSlider
+            slides={[
+              { src: "/newimage.png", alt: "Star Limousine Paris", objectPositionClass: "object-top" },
+              { src: "/hero-slide-2.png", alt: "", objectPositionClass: "object-center" },
+              { src: "/hero-slide-3.png", alt: "", objectPositionClass: "object-center" },
+            ]}
+            intervalMs={8000}
+            fadeMs={1200}
           />
           {/* Bande CTA en bas — façon cinéma, ne couvre pas le couple */}
           <div className="absolute inset-x-0 bottom-0 h-[45%] min-h-[200px] bg-gradient-to-t from-black/95 via-black/60 to-transparent pointer-events-none" aria-hidden />
