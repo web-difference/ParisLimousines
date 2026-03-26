@@ -4,6 +4,8 @@ import PhotoGallery from "@/components/PhotoGallery";
 import AutoHeroSlider from "@/components/AutoHeroSlider";
 
 export default function Home() {
+  const inUse = false;
+
   return (
     <>
       {/* Hero - Image limousine (plein écran sous le header) */}
@@ -17,6 +19,7 @@ export default function Home() {
             ]}
             intervalMs={8000}
             fadeMs={1200}
+            inUse={inUse}
           />
           {/* Bande CTA en bas — façon cinéma, ne couvre pas le couple */}
           <div className="absolute inset-x-0 bottom-0 h-[45%] min-h-[200px] bg-gradient-to-t from-black/95 via-black/60 to-transparent pointer-events-none" aria-hidden />

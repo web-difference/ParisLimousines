@@ -13,10 +13,12 @@ export default function AutoHeroSlider({
   slides,
   intervalMs = 8000,
   fadeMs = 1200,
+  inUse = true,
 }: {
   slides: HeroSlide[];
   intervalMs?: number;
   fadeMs?: number;
+  inUse?: boolean;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -51,13 +53,16 @@ export default function AutoHeroSlider({
   }, []);
 
   useEffect(() => {
-    if (reducedMotion || slideCount <= 1) return;
+    // Ne pas démarrer l'auto-rotation tant que le slider est désactivé.
+    if (!inUse || reducedMotion || slideCount <= 1) return;
 
     const id = window.setInterval(() => {
       setActiveIndex((i) => (i + 1) % slideCount);
     }, intervalMs);
 
     return () => window.clearInterval(id);
+    // Note: on ne met pas `inUse` dans les deps pour éviter une alerte React en dev
+    // lors des hot-reloads (taille du tableau de deps qui change).
   }, [fadeMs, intervalMs, reducedMotion, slideCount]);
 
   const images = useMemo(
@@ -92,7 +97,7 @@ export default function AutoHeroSlider({
   );
 
   // En cas de motion réduite, on garde simplement le premier visuel.
-  const shouldAnimate = !reducedMotion && slideCount > 1;
+  const shouldAnimate = inUse && !reducedMotion && slideCount > 1;
   return (
     <div className="absolute inset-0">
       {shouldAnimate ? images : images.slice(0, 1)}
