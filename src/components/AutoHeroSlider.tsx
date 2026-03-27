@@ -87,6 +87,7 @@ export default function AutoHeroSlider({
               fill
               className={`w-full h-full object-cover ${objectPositionClass}`}
               sizes="100vw"
+              quality={100}
               unoptimized
               priority={i === 0}
             />

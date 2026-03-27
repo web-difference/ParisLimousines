@@ -13,7 +13,7 @@ export default function Home() {
         <div className="relative w-full min-h-[72vh] md:min-h-0 md:aspect-[21/9] overflow-hidden">
           <AutoHeroSlider
             slides={[
-              { src: "/newimage.png", alt: "Star Limousine Paris", objectPositionClass: "object-top" },
+              { src: "/hero-slide-1.png", alt: "Star Limousine Paris", objectPositionClass: "object-[50%_75%]" },
               { src: "/hero-slide-2.png", alt: "", objectPositionClass: "object-center" },
               { src: "/hero-slide-3.png", alt: "", objectPositionClass: "object-center" },
             ]}
@@ -21,6 +21,7 @@ export default function Home() {
             fadeMs={1200}
             inUse={inUse}
           />
+          <div className="absolute inset-0 bg-black/55" aria-hidden />
           {/* Bande CTA en bas — façon cinéma, ne couvre pas le couple */}
           <div className="absolute inset-x-0 bottom-0 h-[45%] min-h-[200px] bg-gradient-to-t from-black/95 via-black/60 to-transparent pointer-events-none" aria-hidden />
           <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end p-8 md:p-12 lg:p-16 pb-10 md:pb-12 pointer-events-none">
@@ -119,10 +120,10 @@ export default function Home() {
       <section className="relative py-24 md:py-32 overflow-hidden min-h-[28rem] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/section-soiree-paris.png"
+            src="/newimage.png"
             alt=""
             fill
-            className="object-cover object-[50%_60%]"
+            className="object-cover object-[50%_20%]"
             sizes="100vw"
             unoptimized
           />
