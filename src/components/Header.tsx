@@ -114,20 +114,20 @@ export default function Header() {
                 <button
                   type="button"
                   onClick={() => goToLocale("fr")}
-                  className={`p-1.5 rounded-full text-[1.75rem] leading-none transition-opacity focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/40 focus:ring-offset-2 focus:ring-offset-white ${locale === "fr" ? "opacity-100" : "opacity-40 hover:opacity-60"}`}
+                  className={`min-w-9 h-9 px-2 rounded-full text-sm font-black tracking-wide text-gray-900 leading-none transition-opacity focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/40 focus:ring-offset-2 focus:ring-offset-white flex items-center justify-center ${locale === "fr" ? "opacity-100" : "opacity-40 hover:opacity-60"}`}
                   aria-label="Français"
                   title="Français"
                 >
-                  <span role="img" aria-hidden>🇫🇷</span>
+                  FR
                 </button>
                 <button
                   type="button"
                   onClick={() => goToLocale("en")}
-                  className={`p-1.5 rounded-full text-[1.75rem] leading-none transition-opacity focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/40 focus:ring-offset-2 focus:ring-offset-white ${locale === "en" ? "opacity-100" : "opacity-40 hover:opacity-60"}`}
+                  className={`min-w-9 h-9 px-2 rounded-full text-sm font-black tracking-wide text-gray-900 leading-none transition-opacity focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/40 focus:ring-offset-2 focus:ring-offset-white flex items-center justify-center ${locale === "en" ? "opacity-100" : "opacity-40 hover:opacity-60"}`}
                   aria-label="English (US)"
                   title="English (US)"
                 >
-                  <span role="img" aria-hidden>🇺🇸</span>
+                  EN
                 </button>
               </div>
             </li>
@@ -188,20 +188,20 @@ export default function Header() {
                   <button
                     type="button"
                     onClick={() => goToLocale("fr")}
-                    className={`p-1.5 rounded-full text-[1.75rem] leading-none transition-opacity focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/40 focus:ring-offset-2 focus:ring-offset-white ${locale === "fr" ? "opacity-100" : "opacity-40 hover:opacity-60"}`}
+                    className={`min-w-9 h-9 px-2 rounded-full text-sm font-black tracking-wide text-gray-900 leading-none transition-opacity focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/40 focus:ring-offset-2 focus:ring-offset-white flex items-center justify-center ${locale === "fr" ? "opacity-100" : "opacity-40 hover:opacity-60"}`}
                     aria-label="Français"
                     title="Français"
                   >
-                    <span role="img" aria-hidden>🇫🇷</span>
+                    FR
                   </button>
                   <button
                     type="button"
                     onClick={() => goToLocale("en")}
-                    className={`p-1.5 rounded-full text-[1.75rem] leading-none transition-opacity focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/40 focus:ring-offset-2 focus:ring-offset-white ${locale === "en" ? "opacity-100" : "opacity-40 hover:opacity-60"}`}
+                    className={`min-w-9 h-9 px-2 rounded-full text-sm font-black tracking-wide text-gray-900 leading-none transition-opacity focus:outline-none focus:ring-2 focus:ring-[#F34FC7]/40 focus:ring-offset-2 focus:ring-offset-white flex items-center justify-center ${locale === "en" ? "opacity-100" : "opacity-40 hover:opacity-60"}`}
                     aria-label="English (US)"
                     title="English (US)"
                   >
-                    <span role="img" aria-hidden>🇺🇸</span>
+                    EN
                   </button>
                 </div>
               </li>
