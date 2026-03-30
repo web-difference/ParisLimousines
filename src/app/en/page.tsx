@@ -168,6 +168,17 @@ export default function EnHome() {
                 <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed">
                   2-hour ride through lit-up Paris. Champagne, lights, your playlist. The star experience.
                 </p>
+                <a
+                  href={`https://wa.me/33699717759?text=${encodeURIComponent("Hi, I'd like to book: Paris by night")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 mt-6 w-full sm:w-auto px-6 py-3 rounded-xl border-2 border-[#F34FC7] text-[#F34FC7] font-semibold text-lg bg-transparent hover:bg-brand-gradient hover:text-white hover:border-transparent transition-all"
+                >
+                  Book
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
               </div>
             </article>
             <article className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#F34FC7]/30 transition-colors relative">
@@ -194,6 +205,17 @@ export default function EnHome() {
                 <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed">
                   Festive vibe with friends. Up to 8, champagne, music. The night everyone talks about.
                 </p>
+                <a
+                  href={`https://wa.me/33699717759?text=${encodeURIComponent("Hi, I'd like to book: Student night")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 mt-6 w-full sm:w-auto px-6 py-3 rounded-xl border-2 border-[#F34FC7] text-[#F34FC7] font-semibold text-lg bg-transparent hover:bg-brand-gradient hover:text-white hover:border-transparent transition-all"
+                >
+                  Book
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
               </div>
             </article>
             <article className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#F34FC7]/30 transition-colors">
@@ -215,6 +237,17 @@ export default function EnHome() {
                 <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed">
                   Food tour of Paris. All-you-can-eat crêpes on board, Breton cider and good vibes. A unique package.
                 </p>
+                <a
+                  href={`https://wa.me/33699717759?text=${encodeURIComponent("Hi, I'd like to book: All-you-can-eat crêpes night")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 mt-6 w-full sm:w-auto px-6 py-3 rounded-xl border-2 border-[#F34FC7] text-[#F34FC7] font-semibold text-lg bg-transparent hover:bg-brand-gradient hover:text-white hover:border-transparent transition-all"
+                >
+                  Book
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
               </div>
             </article>
           </div>
@@ -238,6 +271,17 @@ export default function EnHome() {
                 <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed">
                   7 days a week · Paris and suburbs. Elegant arrival, chauffeur in suit, tailored services.
                 </p>
+                <a
+                  href={`https://wa.me/33699717759?text=${encodeURIComponent("Hi, I'd like to book: Wedding package")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 mt-6 w-full sm:w-auto px-6 py-3 rounded-xl border-2 border-[#F34FC7] text-[#F34FC7] font-semibold text-lg bg-transparent hover:bg-brand-gradient hover:text-white hover:border-transparent transition-all"
+                >
+                  Book
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
               </div>
             </article>
           </div>
