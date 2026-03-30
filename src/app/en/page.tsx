@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import PhotoGallery from "@/components/PhotoGallery";
+import AutoHeroSlider from "@/components/AutoHeroSlider";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/en" },
@@ -12,17 +13,17 @@ export default function EnHome() {
     <>
       <section className="relative w-full -mt-0 md:-mt-[220px] overflow-hidden">
         <div className="relative w-full min-h-[72vh] md:min-h-0 md:aspect-[21/9] overflow-hidden">
-          <Image
-            src="/newimage.png"
-            alt="Star Limousine Paris"
-            width={2560}
-            height={1090}
-            sizes="100vw"
-            className="w-full h-full object-cover object-top"
-            priority
-            quality={100}
-            unoptimized
+          <AutoHeroSlider
+            slides={[
+              { src: "/hero-slide-1.png", alt: "Star Limousine Paris", objectPositionClass: "object-[50%_75%]" },
+              { src: "/hero-slide-2.png", alt: "", objectPositionClass: "object-center" },
+              { src: "/hero-slide-3.png", alt: "", objectPositionClass: "object-center" },
+            ]}
+            intervalMs={8000}
+            fadeMs={1200}
+            inUse={false}
           />
+          <div className="absolute inset-0 bg-black/55" aria-hidden />
           <div className="absolute inset-x-0 bottom-0 h-[45%] min-h-[200px] bg-gradient-to-t from-black/95 via-black/60 to-transparent pointer-events-none" aria-hidden />
           <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end p-8 md:p-12 lg:p-16 pb-10 md:pb-12 pointer-events-none">
             <div className="pointer-events-auto text-center max-w-xl w-full">
@@ -118,10 +119,10 @@ export default function EnHome() {
       <section className="relative py-24 md:py-32 overflow-hidden min-h-[28rem] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/section-soiree-paris.png"
+            src="/newimage.png"
             alt=""
             fill
-            className="object-cover object-[50%_60%]"
+            className="object-cover object-[50%_20%]"
             sizes="100vw"
             unoptimized
           />
@@ -213,6 +214,29 @@ export default function EnHome() {
                 </h3>
                 <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed">
                   Food tour of Paris. All-you-can-eat crêpes on board, Breton cider and good vibes. A unique package.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            <article className="group lg:col-span-3 md:col-span-2 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#F34FC7]/30 transition-colors">
+              <div className="relative overflow-hidden bg-black/40 aspect-[4/3] lg:aspect-auto lg:h-[280px]">
+                <Image
+                  src="/experience-mariage.png"
+                  alt="Wedding in a limousine"
+                  fill
+                  className="object-cover object-center lg:object-[50%_40%] transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden />
+              </div>
+              <div className="p-6 md:p-8">
+                <h3 className="font-display text-xl md:text-2xl font-semibold text-white">
+                  Wedding package
+                </h3>
+                <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed">
+                  7 days a week · Paris and suburbs. Elegant arrival, chauffeur in suit, tailored services.
                 </p>
               </div>
             </article>
