@@ -222,6 +222,29 @@ export default function Home() {
               </div>
             </article>
           </div>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            <article className="group lg:col-span-3 md:col-span-2 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#F34FC7]/30 transition-colors">
+              <div className="relative overflow-hidden bg-black/40 aspect-[4/3] lg:aspect-auto lg:h-[280px]">
+                <Image
+                  src="/experience-mariage.png"
+                  alt="Mariage en limousine"
+                  fill
+                  className="object-cover object-center lg:object-[50%_35%] transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden />
+              </div>
+              <div className="p-6 md:p-8">
+                <h3 className="font-display text-xl md:text-2xl font-semibold text-white">
+                  Forfait mariage
+                </h3>
+                <p className="mt-3 text-white/60 text-sm md:text-base leading-relaxed">
+                  7j/7 · Paris et petite couronne. Arrivée élégante, chauffeur en costume, prestations sur mesure.
+                </p>
+              </div>
+            </article>
+          </div>
           <div className="mt-12 flex justify-center">
             <Link
               href="/prestations"
