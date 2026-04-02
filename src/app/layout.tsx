@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.star-limousine-paris.com"),
@@ -33,6 +34,7 @@ export default function RootLayout({
         </div>
         <main className="flex-1 pt-24 md:pt-[220px]">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
